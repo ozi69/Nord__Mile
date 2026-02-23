@@ -1,0 +1,16 @@
+/* jost */
+
+@font-face {
+  font-family: Jost;
+  src: url("src/font/Jost/Jost-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: Martian Mono;
+  src: url("src/font/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}

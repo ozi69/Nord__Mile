@@ -1,0 +1,178 @@
+.section-catalog {
+}
+._container {
+}
+._container {
+}
+.container-head {
+  display: flex;
+  justify-content: space-between;
+}
+.head__block-btn {
+  display: flex;
+  gap: 0.4rem;
+}
+.head-btn {
+  svg {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    @media (max-width: 767px) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 50%;
+  }
+}
+.head-btn__catalog-left {
+}
+.head-btn__catalog-right {
+}
+
+/* slider-container */
+
+.card-catalog {
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+
+  border-radius: var(--unit-24);
+  padding: var(--unit-80) var(--unit-24) var(--unit-24);
+
+  position: relative;
+
+  min-height: 62rem;
+
+  @media (max-width: 767px) {
+    border-radius: var(--unit-12);
+    min-height: 42rem;
+    padding: 5rem 1.6rem 1.6rem;
+  }
+}
+
+/* tags */
+.card-catalog__tags {
+  padding: 0.4rem 1.2rem 0.6rem;
+  border-radius: 6rem;
+
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
+
+  /* width: fit-content; */
+
+  @media (max-width: 767px) {
+    padding: 0.3rem 0.8rem 0.4rem;
+
+    top: 1.6rem;
+    left: 1.6rem;
+  }
+}
+.card-catalog__tags-text {
+  background-image: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  background-clip: text;
+  color: transparent;
+}
+.card-catalog__tag-01 {
+  background-color: var(--red);
+}
+.card-catalog__tag-02 {
+  background: var(--gradient);
+}
+.card-catalog__tag-03 {
+  background-color: #6db42b;
+}
+/*  */
+.card-catalog__block-img {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+}
+.card-catalog__img-item {
+  width: 19rem;
+  height: 32rem;
+
+  padding: 0 10rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 767px) {
+    padding: 0 6rem;
+
+    width: 13rem;
+    height: 22rem;
+  }
+}
+.card-catalog__content {
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media (max-width: 767px) {
+    gap: 2.2rem;
+
+    margin-top: 2rem;
+  }
+}
+.card-catalog__content-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  color: var(--primary);
+}
+.card-catalog__content-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-catalog__info-price {
+  color: var(--primary);
+}
+
+/*  */
+
+/* Fade эффект */
+.card-image-swiper .swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease !important;
+}
+
+.card-image-swiper .swiper-slide-active {
+  opacity: 1 !important;
+}
+
+/* Пагинация */
+.card-image-pagination {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  z-index: 10;
+
+  margin: -10rem 0 0 0;
+}
+
+.card-image-pagination .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--light-grey);
+  opacity: 0.7;
+  margin: 0 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: var(--unit-8);
+}
+
+.card-image-pagination .swiper-pagination-bullet-active {
+  background: var(--dark-blue);
+  width: 2rem;
+  opacity: 1;
+}

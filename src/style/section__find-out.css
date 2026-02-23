@@ -1,0 +1,46 @@
+.section-find__out {
+  ._container {
+    @media (max-width: 767px) {
+      padding-inline: unset;
+    }
+  }
+}
+.container-find__out {
+  position: relative;
+
+  padding: 6rem;
+
+  height: 70rem;
+
+  @media (max-width: 767px) {
+    height: 40rem;
+    padding: 2rem;
+  }
+}
+.container-find__out-img {
+  position: absolute;
+  inset: 0;
+
+  img {
+    border-radius: var(--unit-32);
+
+    @media (max-width: 767px) {
+      object-fit: cover;
+      border-radius: var(--unit-16);
+    }
+  }
+}
+.container-find__out-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+
+  @media (max-width: 767px) {
+    text-align: center;
+    gap: 2.4rem;
+  }
+}
