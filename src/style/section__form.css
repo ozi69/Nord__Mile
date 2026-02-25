@@ -1,0 +1,156 @@
+.section-form {
+  ._container {
+    @media (max-width: 767px) {
+      padding-inline: unset;
+    }
+  }
+}
+.contianer-form {
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  border-radius: var(--unit-32);
+  padding: 9.6rem 22rem;
+
+  display: grid;
+  grid-template-columns: 61rem 46rem;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 4rem 1.6rem;
+    border-radius: unset;
+
+    gap: 2rem;
+  }
+}
+
+.container-form__content {
+  position: relative;
+  color: var(--primary);
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+.container-form__content-text {
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+.container-form__content-bold {
+  font-weight: 600 !important;
+}
+/*  */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+
+  @media (max-width: 767px) {
+    gap: 1.6rem;
+  }
+}
+
+.form-input {
+  border-radius: var(--unit-32);
+  padding: var(--unit-20);
+
+  border: 0.1rem solid var(--light-grey);
+  background: transparent;
+
+  @media (max-width: 767px) {
+    padding: 1rem 2.4rem;
+  }
+
+  &::placeholder {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0%;
+    color: var(--grey-text);
+
+    transition: 0.3s ease;
+
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+.form__btn {
+  padding: 2rem !important;
+
+  @media (max-width: 767px) {
+    padding: 1rem 0 !important;
+  }
+}
+
+.container-form__img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/*  */
+
+.box-label {
+  position: relative;
+  display: inline-flex;
+  gap: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+
+  color: var(--grey-text);
+
+  /* Скрываем настоящий чекбокс */
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
+  /* Сам квадрат чекбокса */
+  .custom-checkbox {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid var(--light-grey);
+    flex-shrink: 0;
+  }
+
+  /* Галочка (лучше через псевдоэлемент) */
+  .custom-checkbox::before {
+    content: "";
+    position: absolute;
+    inset: -0.1rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    background: url("../img/Check-Box.svg") center/contain no-repeat;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+  }
+
+  /* Когда чекбокс отмечен */
+  input[type="checkbox"]:checked + .custom-checkbox::before {
+    opacity: 1;
+    border-radius: var(--border-6r);
+  }
+}

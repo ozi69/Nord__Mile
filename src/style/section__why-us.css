@@ -1,0 +1,115 @@
+.section-why__us {
+}
+._container {
+}
+.container-why__us-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+.container-why__us-head-title {
+  color: var(--primary);
+}
+.container-why__us-head-text {
+  color: var(--grey-text);
+
+  @media (max-width: 767px) {
+    font-weight: 600 !important;
+  }
+}
+.container-core {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 91rem 80rem;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    margin-top: var(--unit-20);
+  }
+}
+.container-core__block-img {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-40);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.container-core__block-img__item {
+  height: 58rem;
+
+  img {
+    border-radius: var(--unit-32);
+    object-fit: cover;
+  }
+}
+.why-us__mobile-img {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    height: 22rem;
+
+    img {
+      border-radius: var(--unit-20);
+      object-fit: cover;
+    }
+  }
+}
+.container-core__block-text {
+  color: var(--primary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 7.2rem;
+
+  @media (max-width: 767px) {
+    gap: var(--unit-20);
+  }
+}
+.container-core__block-hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-40);
+
+  @media (max-width: 767px) {
+    gap: var(--unit-20);
+  }
+}
+.container-core__hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-20);
+}
+.container-core__block-link {
+  padding: var(--unit-40) 9rem;
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  border-radius: var(--unit-32);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--unit-40);
+
+  @media (max-width: 767px) {
+    padding: var(--unit-16) var(--unit-16) var(--unit-20);
+    gap: 3rem;
+    border-radius: var(--unit-20);
+  }
+
+  .body__20-m {
+    @media (max-width: 767px) {
+      font-size: var(--unit-16);
+    }
+  }
+}

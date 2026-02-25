@@ -1,0 +1,296 @@
+.modal-content {
+  width: 80rem;
+  border-radius: var(--unit-32);
+  padding: var(--unit-40);
+  background-color: var(--white);
+
+  position: relative;
+
+  transition: transform 0.3s ease;
+}
+.close-modal {
+  position: absolute;
+  top: var(--unit-24);
+  right: var(--unit-24);
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+.modal-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-40);
+}
+.modal-head__hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  text-align: center;
+}
+.modal-head__hgroup-title {
+  color: var(--primary);
+}
+.modal-head__hgroup-text {
+  color: var(--grey-text);
+}
+.modal-head__progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-12);
+
+  width: 60rem;
+  margin: 0 auto;
+}
+.modal-progress__content {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-progress__content-text {
+  color: var(--grey-text);
+}
+.modal-progress__content-text__item {
+}
+.modal-progress__content-procent {
+  color: var(--grey-text);
+  font-variant-numeric: tabular-nums; /* моноширинные цифры, если шрифт поддерживает */
+}
+.modal-progress__content-procent__value {
+  display: inline-block;
+  min-width: 2ch; /* чтобы не прыгала ширина */
+  text-align: right;
+  transition: all 0.7s ease-out;
+}
+.progress-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  height: var(--unit-8);
+  border-radius: var(--unit-12);
+
+  position: relative;
+}
+.progress-bar__active {
+  width: 0%; /* начальное значение */
+  transition: width 0.7s ease-out; /* основная анимация */
+  background-color: var(--primary);
+  height: var(--unit-8);
+  border-radius: var(--unit-12);
+}
+
+/*  */
+
+.quiz-container {
+  margin-top: 4rem;
+}
+.quiz-container__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-20);
+}
+.quiz-container__content-hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.quiz-container__content-title {
+  text-align: center;
+}
+.quiz-container__content-text {
+  text-align: center;
+  color: var(--grey-text);
+}
+.quiz-select {
+  padding: var(--unit-16) var(--unit-24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: var(--unit-16);
+  border: 0.2rem solid var(--line);
+
+  cursor: pointer;
+}
+.quiz-select-block {
+  display: flex;
+  align-items: center;
+  gap: var(--unit-12);
+}
+.quiz-select__box {
+  width: 4.8rem;
+  height: 4.8rem;
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+.quiz-select__check {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/*  */
+
+.quiz-modal__block-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: var(--unit-20);
+
+  margin-top: var(--unit-40);
+}
+
+/* final */
+
+.quiz-final {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-20);
+
+  margin-top: var(--unit-20);
+}
+.quiz-final__hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  text-align: center;
+}
+.quiz-final__hgroup-title {
+  color: var(--primary);
+}
+.quiz-final__hgroup-text {
+  color: var(--grey-text);
+}
+.quiz-final__img {
+  height: 26rem;
+  width: 16rem;
+
+  margin: 0 auto;
+}
+.quiz-final__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-12);
+}
+.quiz-final__advantages-title {
+  color: var(--primary);
+}
+.quiz-final__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-12);
+}
+.quiz-final__list-item {
+  display: flex;
+  gap: var(--unit-12);
+}
+.quiz-final__item-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.quiz-final__item-text {
+  color: var(--grey-text);
+}
+
+/*  */
+
+.quiz-restart-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--unit-8);
+
+  span {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.quiz-restart-btn__text {
+  color: var(--grey-text);
+  transition: 0.3s all;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+/* для работы с js */
+
+/* ==================== АКТИВНОЕ СОСТОЯНИЕ ВАРИАНТА ==================== */
+.quiz-select {
+  transition: all 0.25s ease;
+}
+
+.quiz-select.active {
+  border-color: var(--primary) !important;
+  background-color: #f8fbff;
+}
+
+.quiz-select.active .quiz-select__check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.quiz-select.active .quiz-select__box {
+  background: var(--primary) !important;
+}
+
+.quiz-select.active .quiz-select__box svg path {
+  stroke: var(--beige) !important;
+}
+
+/* По умолчанию галочка скрыта */
+.quiz-select__check {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.25s ease;
+}
+
+/* ==================== УПРАВЛЕНИЕ КНОПКАМИ ==================== */
+.quiz-modal__block-btn .quiz-btn-back,
+.quiz-modal__block-btn .quiz-btn-next,
+.quiz-modal__block-btn .quiz-link-final,
+.quiz-modal__block-btn .quiz-restart-btn {
+  display: none;
+}
+
+/* По умолчанию показываем только Назад + Далее */
+.quiz-modal__block-btn .quiz-btn-back,
+.quiz-modal__block-btn .quiz-btn-next {
+  display: flex;
+}
+
+/* Финал */
+.quiz-final-visible .quiz-btn-back,
+.quiz-final-visible .quiz-btn-next {
+  display: none;
+}
+.quiz-final-visible .quiz-link-final,
+.quiz-final-visible .quiz-restart-btn {
+  display: flex;
+}
+
+/* На первом шаге кнопка "Назад" отключена */
+.quiz-step-1 .quiz-btn-back {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/*  */
+

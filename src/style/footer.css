@@ -12,6 +12,7 @@ footer {
 
   @media (max-width: 767px) {
     padding: var(--unit-40) var(--unit-16) var(--unit-20);
+    margin: 0 auto;
   }
 }
 .footer-up {
