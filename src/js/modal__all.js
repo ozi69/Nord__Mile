@@ -84,27 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
 
-      closeButtons.forEach(btn => {
+closeButtons.forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
     const modal = btn.closest(this.modalSelector);
-    if (modal) {
-      // Добавляем класс для анимации, но не закрываем сразу
-      modal.classList.add('modal-leave-to');
-      
-      // Ждем окончания анимации
-      const onTransitionEnd = () => {
-        modal.style.vis = 'none';
-        modal.classList.remove('modal-leave-to');
-        this.unlockScroll();
-        this.activeModals.delete(modal);
-        modal.removeEventListener('transitionend', onTransitionEnd);
-      };
-      
-      modal.addEventListener('transitionend', onTransitionEnd);
-      setTimeout(onTransitionEnd, 400); // запасной выход
-    }
+    if (modal) this.closeModal(modal); // просто вызываем уже готовый метод
   });
 });
 
@@ -174,3 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initBurgerMenu();
 
 });
+
+
+

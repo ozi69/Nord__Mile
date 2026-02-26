@@ -19,6 +19,7 @@
 @import url(./src/style/section__form.css);
 @import url(./src/style/section__why-us.css);
 @import url(./src/style/modal__quiz.css);
+@import url(./src/style/catalog__page.css);
 
 /*  */
 
@@ -669,23 +670,18 @@
 
   justify-content: center;
   align-items: center;
-}
 
-.modal-enter-from {
-  opacity: 0;
+  opacity: 1; /* базовое состояние */
   transition: opacity 0.3s ease;
 }
 
+.modal-enter-from,
 .modal-leave-to {
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .modal-enter-from .modal-content,
 .modal-leave-to .modal-content {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
 }

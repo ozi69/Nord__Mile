@@ -30,7 +30,7 @@ body {
   @media (max-width: 767px) {
     font-size: calc((100 / 375) * 10vw);
 
-    /* padding-top: 3.4rem; */
+    padding-top: 3.4rem;
   }
 }
 

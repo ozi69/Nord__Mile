@@ -1,9 +1,16 @@
 header {
 }
+.header-wrapper {
+  margin: 4rem 4rem 0;
 
+  @media (max-width: 767px) {
+    margin: unset;
+  }
+}
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   align-items: center;
 
   max-width: 1920px;
@@ -22,6 +29,17 @@ header {
 .header__container {
   padding: 1.6rem 2.4rem;
   background-color: #ffffff66;
+  backdrop-filter: blur(2rem);
+  border-radius: var(--unit-16);
+
+  @media (max-width: 767px) {
+    padding: 2rem 1.6rem;
+    border-radius: unset;
+  }
+}
+.header__container-alt {
+  background: #28315c1a;
+  padding: 1.6rem 2.4rem;
   backdrop-filter: blur(2rem);
   border-radius: var(--unit-16);
 
