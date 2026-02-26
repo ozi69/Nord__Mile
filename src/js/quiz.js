@@ -144,9 +144,9 @@ function animateCounter(start, end, duration) {
   })
 
   // ==================== ЗАКРЫТИЕ МОДАЛКИ ====================
-  document.querySelectorAll('[data-modal-close]').forEach(el => {
-    el.addEventListener('click', () => modal.style.display = 'none')
-  })
+  // document.querySelectorAll('[data-modal-close]').forEach(el => {
+  //   el.addEventListener('click', () => modal.style.display = 'none')
+  // })
 
   // ==================== ИНИЦИАЛИЗАЦИЯ ====================
   showStep(0) // стартуем с первого вопроса

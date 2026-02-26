@@ -31,43 +31,22 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.paddingRight = '0px';
     }
 
-    openModal(modal) {
-      if (this.activeModals.has(modal)) return;
+openModal(modal) {
+  if (this.activeModals.has(modal)) return;
+  this.activeModals.add(modal);
+  this.lockScroll();
+  requestAnimationFrame(() => {
+    modal.classList.add('modal-active');
+  });
+}
 
-      modal.style.display = 'flex';
-      modal.classList.add('modal-enter-from');
-
-      this.lockScroll();
-      this.activeModals.add(modal);
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          modal.classList.remove('modal-enter-from');
-        });
-      });
-
-      if (this.onOpen) this.onOpen(modal);
-    }
 
     closeModal(modal) {
-      if (!this.activeModals.has(modal)) return;
-
-      modal.classList.add('modal-leave-to');
-
-      const onTransitionEnd = () => {
-        modal.style.display = 'none';
-        modal.classList.remove('modal-leave-to');
-
-        this.unlockScroll();
-        this.activeModals.delete(modal);
-
-        if (this.onClose) this.onClose(modal);
-        modal.removeEventListener('transitionend', onTransitionEnd);
-      };
-
-      modal.addEventListener('transitionend', onTransitionEnd);
-      setTimeout(onTransitionEnd, 400); // запасной выход
-    }
+  if (!this.activeModals.has(modal)) return;
+  modal.classList.remove('modal-active');
+  this.activeModals.delete(modal);
+  setTimeout(() => this.unlockScroll(), 300); // ждём окончания transition
+}
 
     initModals() {
       const modals = document.querySelectorAll(this.modalSelector);
@@ -84,14 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
 
-closeButtons.forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.preventDefault();
-    e.stopPropagation();
-    const modal = btn.closest(this.modalSelector);
-    if (modal) this.closeModal(modal); // просто вызываем уже готовый метод
-  });
-});
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const modal = btn.closest(this.modalSelector);
+          if (modal) this.closeModal(modal); // просто вызываем уже готовый метод
+        });
+      });
 
       modals.forEach(modal => {
         modal.addEventListener('click', e => {

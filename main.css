@@ -656,9 +656,8 @@
 /*  */
 
 /* modal */
-
+/* 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -668,10 +667,11 @@
   z-index: 1000;
   backdrop-filter: blur(1.2rem);
 
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  opacity: 1; /* базовое состояние */
+  opacity: 1; 
   transition: opacity 0.3s ease;
 }
 
@@ -684,4 +684,39 @@
 .modal-leave-to .modal-content {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
+} */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(1.2rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.modal.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .modal-content {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal.modal-active .modal-content {
+  transform: scale(1);
 }
