@@ -143,11 +143,5 @@ function animateCounter(start, end, duration) {
     showStep(0)
   })
 
-  // ==================== ЗАКРЫТИЕ МОДАЛКИ ====================
-  // document.querySelectorAll('[data-modal-close]').forEach(el => {
-  //   el.addEventListener('click', () => modal.style.display = 'none')
-  // })
-
-  // ==================== ИНИЦИАЛИЗАЦИЯ ====================
   showStep(0) // стартуем с первого вопроса
-})
+})  

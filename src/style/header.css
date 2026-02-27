@@ -52,9 +52,13 @@ header {
   backdrop-filter: blur(2rem);
   border-radius: var(--unit-16);
 
+  position: unset;
+
   @media (max-width: 767px) {
     padding: 2rem 1.6rem;
     border-radius: unset;
+
+    position: fixed;
   }
 }
 .header-block__start {

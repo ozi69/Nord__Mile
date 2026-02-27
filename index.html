@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
+    <header class="">
       <div class="header header__container">
         <div class="header-block__start">
           <div class="burger">
@@ -1361,9 +1361,17 @@
               </a>
             </div>
 
-            <div class="container__about-video">
-              <video src="src/video/video__about.mp4" class="container__about-video__item" controls></video>
-            </div>
+<div class="container__about-video">
+  <video
+    src="src/video/video__about.mp4"
+    class="container__about-video__item"
+    muted
+    autoplay
+    playsinline
+    webkit-playsinline
+    controls
+  ></video>
+</div>
           </div>
         </div>
       </section>
@@ -2555,6 +2563,7 @@
 
   <!--  -->
 
+  <script src="src/js/autoplay__video.js"></script>
   <script src="src/js/modal__all.js"></script>
   <script src="src/js/quiz.js"></script>
   <script src="src/js/header__outside.js"></script>

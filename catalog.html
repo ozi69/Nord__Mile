@@ -67,7 +67,7 @@
     <main class="page">
       <!-- catalog-page -->
       <section class="catalog-page">
-        <div class="_container">
+        <div class="_container-alt">
           <div class="body__16 bread-crumbs">
             <a href="" class="bread-crumbs__back">
               Главная/
@@ -112,161 +112,810 @@
               </div>
             </div>
 
-            <div class="container-catalog__filter">
-              <div class="catalog-filter_list">
-                <div class="catalog-filter_list-head">
-                  <div class="catalog-filter_list-hgroup">
-                    <div class="catalog-filter_list-hgroup__img">
-                      <img src="src/img/icon-sort.svg" alt="">
+            <div class="container-catalog__core">
+              <div class="container-catalog__filter">
+                <div class="catalog-filter_list">
+                  <div class="catalog-filter_list-head">
+                    <div class="catalog-filter_list-hgroup">
+                      <div class="catalog-filter_list-hgroup__img">
+                        <img src="src/img/icon-sort.svg" alt="">
+                      </div>
+        
+                      <p class="catalog-filter_list-hgroup__text lable__20">
+                        Сначала дешевле
+                      </p>
                     </div>
       
-                    <p class="catalog-filter_list-hgroup__text lable__20">
-                      Сначала дешевле
-                    </p>
+                    <div class="catalog-filter_list-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                   </div>
     
-                  <div class="catalog-filter_list-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                  <div class="catalog-filter__down-list">
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дешевле
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дороже
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала популярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала непопулярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С высоким рейтингом
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С низким рейтингом
+                    </p>
                   </div>
                 </div>
-  
-                <div class="catalog-filter__down-list">
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дешевле
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дороже
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала популярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала непопулярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С высоким рейтингом
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С низким рейтингом
-                  </p>
-                </div>
-              </div>
-              <div class="catalog-filter_list">
-                <div class="catalog-filter_list-head">
-                  <div class="catalog-filter_list-hgroup">
-                    <div class="catalog-filter_list-hgroup__img">
-                      <img src="src/img/icon-sort.svg" alt="">
-                    </div>
+                <div class="catalog-filter_list">
+                  <div class="catalog-filter_list-head">
+                    <p class="catalog-filter_list-hgroup__text lable__20">
+                      Цена
+                    </p>
       
-                    <p class="catalog-filter_list-hgroup__text lable__20">
-                      Сначала дешевле
-                    </p>
+                    <div class="catalog-filter_list-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                   </div>
     
-                  <div class="catalog-filter_list-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
+                  <div class="catalog-filter__popup">
+                    <div class="popup-content">
+                      <span class="close-popup__mobile">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <div class="popup-content__hgroup">
+                        <span class="popup-content__hgroup-text body__small">
+                          от 
+                          <span class="popup-content__hgroup-text__item body__16" id="minPrice">
+                            520₽
+                          </span>
+                        </span>
   
-                <div class="catalog-filter__popup">
-                  <div class="popup-content">
-                    <div>
-                      <span>
-                        от 
-                        <span>
-                          520₽
+                        <span class="popup-content__hgroup-span body__small">
+                          до
+                          <span class="popup-content__hgroup-span__item body__16" id="maxPrice">
+                            8 920₽
+                          </span>
                         </span>
-                      </span>
-
-                      <span>
-                        до
-                        <span>
-                          8 920₽
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="">
-                      <div>
-                        <div>
-
+                      </div>
+  
+                      <div class="popup-progress">
+                        <div class="popup-progress__active">
+                          <div class="popup-progress__active-toddler">
+  
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="catalog-filter_list">
-                <div class="catalog-filter_list-head">
-                  <p class="catalog-filter_list-hgroup__text lable__20">
-                    Для кого
-                  </p>
+                <div class="catalog-filter_list">
+                  <div class="catalog-filter_list-head">
+                    <p class="catalog-filter_list-hgroup__text lable__20">
+                      Для кого
+                    </p>
+      
+                    <div class="catalog-filter_list-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
     
-                  <div class="catalog-filter_list-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                  <div class="catalog-filter__down-list">
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дешевле
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дороже
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала популярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала непопулярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С высоким рейтингом
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С низким рейтингом
+                    </p>
                   </div>
                 </div>
-  
-                <div class="catalog-filter__down-list">
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дешевле
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дороже
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала популярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала непопулярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С высоким рейтингом
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С низким рейтингом
-                  </p>
-                </div>
-              </div>
-              <div class="catalog-filter_list">
-                <div class="catalog-filter_list-head">
-                  <p class="catalog-filter_list-hgroup__text lable__20">
-                    Форма выпуска
-                  </p>
+                <div class="catalog-filter_list">
+                  <div class="catalog-filter_list-head">
+                    <p class="catalog-filter_list-hgroup__text lable__20">
+                      Форма выпуска
+                    </p>
+      
+                    <div class="catalog-filter_list-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
     
-                  <div class="catalog-filter_list-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                  <div class="catalog-filter__down-list">
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дешевле
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала дороже
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала популярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      Сначала непопулярные
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С высоким рейтингом
+                    </p>
+                    <p class="body__16 catalog-filter__down-list__item">
+                      С низким рейтингом
+                    </p>
                   </div>
                 </div>
-  
-                <div class="catalog-filter__down-list">
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дешевле
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала дороже
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала популярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    Сначала непопулярные
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С высоким рейтингом
-                  </p>
-                  <p class="body__16 catalog-filter__down-list__item">
-                    С низким рейтингом
-                  </p>
+              </div>
+              <div class="container-catalog__core-btn">
+                <button class="container-catalog__core-btn__item body__16">
+                  Сбросить все
+                </button>
+              </div>
+            </div>
+
+            <div class="container-catalog__shop">
+              <div class="catalog-shop-core">
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
                 </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-catalog">
+                  <span class="card-catalog__tag-01 card-catalog__tags body__small-03">
+                    <span class="card-catalog__tags-text">
+                      sport
+                    </span>
+                  </span>
+    
+                  <div class="card-catalog__block-img swiper card-image-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                      <div class="card-catalog__img-item swiper-slide">
+                        <img src="src/img/img___01.png" alt="">
+                      </div>
+                    </div>
+
+                    <!-- Пагинация для внутреннего слайдера -->
+                    <div class="swiper-pagination card-image-pagination"></div>
+                  </div>
+    
+                  <div class="card-catalog__content">
+                    <p class="card-catalog__content-text lable__20">
+                      NordMile ОМЕГА-3 RTG Premium 
+                      для иммунитета c экстрактом женьшеня 
+                    </p>
+    
+                    <div class="card-catalog__content-info">
+                      <a href=""  class="btn-primary">
+                        <p class="lable__20">
+                          Заказать
+                        </p>
+    
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </a>
+    
+                      <span class="card-catalog__info-price title__24">
+                        1 780₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-catalog__block">
+                <button class="btn-secondary container-catalog__block-btn">
+                  <p class="lable__20">
+                    Показать все
+                  </p>
+
+                  <span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 17L7 7M17 17V8M17 17H8" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
