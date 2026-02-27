@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   gap: var(--unit-40);
+  border: 0.2rem solid transparent;
 
   @media (max-width: 767px) {
     padding: var(--unit-8) var(--unit-16);
@@ -72,7 +73,7 @@
   }
 }
 .container-catalog__tabs-item.active {
-  border: 0.3rem solid var(--primary);
+  border-color: var(--primary);
 }
 .container-catalog__tabs-item__img {
   width: 23rem;

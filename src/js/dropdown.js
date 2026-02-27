@@ -158,3 +158,16 @@ popup.addEventListener('click', (e) => {
     });
   }
 }
+
+
+// catalog -- tabs
+
+document.querySelectorAll('.container-catalog__tabs-item').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.container-catalog__tabs-item').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+
+// По дефолту первый активен
+document.querySelector('.container-catalog__tabs-item').classList.add('active');
