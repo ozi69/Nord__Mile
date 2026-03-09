@@ -1,0 +1,26 @@
+.container-faq {
+  max-width: 122rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.container-faq__head {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  text-align: center;
+}
+.container-faq__head-title {
+  color: var(--primary);
+}
+.container-faq__head__text {
+  color: var(--grey-text);
+}
+.container-faq__block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

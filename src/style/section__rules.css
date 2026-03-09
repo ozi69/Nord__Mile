@@ -1,0 +1,122 @@
+.core-rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  padding: 4rem;
+  border-radius: 4.8rem;
+
+  @media (max-width: 767px) {
+    padding: 2rem 1.6rem;
+    border-radius: 1.4rem;
+
+    gap: 2rem;
+  }
+}
+.container-profi__head {
+  width: fit-content;
+}
+.core-rules-title {
+  text-align: center;
+  color: var(--primary);
+}
+.container-rules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    gap: 1.2rem;
+
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.rules-card {
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+  background: #11214a1a;
+  backdrop-filter: blur(20px);
+
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 3.2rem 1fr;
+    gap: 1.2rem;
+
+    padding: 1.2rem;
+  }
+}
+.rules-card__img {
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white);
+
+  @media (max-width: 767px) {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  img {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @media (max-width: 767px) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+.rules-card__text {
+  color: var(--primary);
+}
+
+/*  */
+
+.block-rules {
+  padding: 2rem;
+  border-radius: 1.4rem;
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  max-width: 80rem;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding: 1.2rem;
+  }
+}
+.block-rules__img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--purple);
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.block-rules__span {
+}
+.block-rules__text {
+  color: var(--grey-text);
+}

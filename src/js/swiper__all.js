@@ -111,6 +111,99 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── CARD IMAGE SWIPERS (внутри карточек) ──────────
   initCardSwipers();
 
+    initProductGallery();
+
+
+    // 
+
+function initProductGallery() {
+  const gallery = document.querySelector('.container-card__slider');
+  if (!gallery) return;
+
+  const defaultBlock = gallery.querySelector('.card-slider__defoult');
+  const defaultImgWrap = gallery.querySelector('.card-slider__defoult-img');
+  const thumbs = gallery.querySelectorAll('.card-slider__list-item');
+
+  if (!defaultBlock || !defaultImgWrap || !thumbs.length) return;
+
+  /* -------------------------------------------------
+     1. СОЗДАЁМ SWIPER-СТРУКТУРУ ДИНАМИЧЕСКИ
+  ------------------------------------------------- */
+
+  defaultBlock.classList.add('swiper', 'cardMain');
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  // берём картинки из списка и делаем из них слайды
+  thumbs.forEach((thumb) => {
+    const img = thumb.querySelector('img');
+    if (!img) return;
+
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+
+    const imgHolder = document.createElement('div');
+    imgHolder.className = 'card-slider__defoult-img';
+
+    const newImg = document.createElement('img');
+    newImg.src = img.src;
+    newImg.alt = img.alt || '';
+
+    imgHolder.appendChild(newImg);
+    slide.appendChild(imgHolder);
+    wrapper.appendChild(slide);
+  });
+
+  // очищаем старую картинку и вставляем swiper
+  defaultBlock.innerHTML = '';
+  defaultBlock.appendChild(wrapper);
+
+  /* -------------------------------------------------
+     2. ИНИЦИАЛИЗИРУЕМ SWIPER
+  ------------------------------------------------- */
+
+  const swiper = new Swiper(defaultBlock, {
+    slidesPerView: 1,
+    effect: 'fade',
+    speed: 500,
+    fadeEffect: { crossFade: true },
+    grabCursor: true,
+    simulateTouch: true,
+    loop: false,
+  });
+
+  /* -------------------------------------------------
+     3. ACTIVE СОСТОЯНИЕ МИНИАТЮР
+  ------------------------------------------------- */
+
+  function setActive(index) {
+    thumbs.forEach(el => el.classList.remove('active'));
+    if (thumbs[index]) thumbs[index].classList.add('active');
+  }
+
+  setActive(0);
+
+  /* -------------------------------------------------
+     4. КЛИК ПО МИНИАТЮРЕ
+  ------------------------------------------------- */
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+      swiper.slideTo(index);
+      setActive(index);
+    });
+  });
+
+  /* -------------------------------------------------
+     5. СВАЙП → ОБНОВЛЯЕМ ACTIVE
+  ------------------------------------------------- */
+
+  swiper.on('slideChange', () => {
+    setActive(swiper.activeIndex);
+  });
+}
+
 });
 
 // ── Отдельная функция — переиспользуется на любой странице ──

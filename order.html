@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа</title>
+
+  <link rel="stylesheet" href="main.css">
+
+  <!-- SEO-Parameters -->
+  <meta name="keywords" content="ключевые слова">
+  <meta name="description" content="описание">
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="путь к иконке">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header header__container-alt">
+        <div class="header-block__start">
+          <div class="burger">
+            <img src="src/img/burger.svg" alt="" class="burger-img">
+          </div>
+  
+          <a href="index.html" class="logo-header">
+            <img src="src/img/logo__header.svg" alt="" class="logo-header__img">
+          </a>
+        </div>
+
+        <nav class="nav-header">
+          <ul class="nav-header__list">
+            <li class="nav-header__list-item">
+              <a href="catalog.html" class="nav-header__list-item__link lable__18-m">
+                Каталог
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="about.html" class="nav-header__list-item__link lable__18-m">
+                О компании
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="blog.html" class="nav-header__list-item__link lable__18-m">
+                Блог
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="reviews.html" class="nav-header__list-item__link lable__18-m">
+                Отзывы
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="block-header-icon">
+          <a href="cart.html" class="block-header__shop block-header-item">
+            <img src="src/img/shop__bag.svg" alt="" class="block-header__shop-img">
+
+            <span class="block-header__shop__counter">
+              12
+            </span>
+          </a>
+          <a href="" class="block-header__person block-header-item">
+            <img src="src/img/personal__account.svg" alt="" class="block-header__person-img">
+          </a>
+        </div>
+      </div>
+    </header>
+  
+    <main class="page">
+      <!-- section-order -->
+      <section>
+        <div class="_container-alt">
+          <div class="body__16 bread-crumbs">
+            <a href="" class="bread-crumbs__back">
+              Главная/
+            </a>
+            <a href="" class="bread-crumbs__back">
+              Корзина/
+            </a>
+            <p class="bread-crumbs__now">
+              Оформление заказа
+            </p>
+          </div>
+
+          <div class="core-order">
+            <div class="h2 core-order__title">
+              Оформление заказа
+            </div>
+
+            <form action="" class="container-order">
+              <div class="container-order-data">
+                <!--  -->
+                <div class="container-order-data__block">
+                  <div class="order-data__block-head">
+                    <span class="order-data__block-head__img">
+                      <img src="src/img/person.svg" alt="">
+                    </span>
+                    <p class="order-data__block-head__title title__26">
+                      Контактные данные
+                    </p>
+                  </div>
+
+                  <div class="order-data__block-record">
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        ФИО
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="text" placeholder="Иванов Иван Иванович" class="input-def body__20">
+                    </label>
+
+                    <label class="label-def body__20">
+                      <p class="body__20 label-def__text">
+                        Телефон
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="tel" placeholder="+7 (___) ___-__-__" class="input-def body__20">
+                    </label>
+
+                    <label class="label-def body__20">
+                      <p class="body__20 label-def__text">
+                        Email
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="email" placeholder="example@mail.ru" class="input-def body__20">
+                    </label>
+                  </div>
+
+                  <p class="order-data__block-record__necessarily body__16">
+                    <span class="label-star body__small-02">
+                      *
+                    </span>
+                    — обязательные поля
+                  </p>
+                </div>
+
+                <!--  -->
+                <div class="container-order-data__block-alt">
+                  <div class="order-data__block-head">
+                    <span class="order-data__block-head__img">
+                      <img src="src/img/car.svg" alt="">
+                    </span>
+                    <p class="order-data__block-head__title title__26">
+                      Доставка
+                    </p>
+                  </div>
+
+                  <div class="aside-basket__two-block aside-basket__two-block__alt">
+                    <div class="aside-basket__two-item aside-basket__two-item__alt">
+                      <span class="aside-basket__two-item__img">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 21V13C15 12.7348 14.8946 12.4804 14.7071 12.2929C14.5196 12.1054 14.2652 12 14 12H10C9.73478 12 9.48043 12.1054 9.29289 12.2929C9.10536 12.4804 9 12.7348 9 13V21" stroke="#28315C" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 10.0005C2.99993 9.70952 3.06333 9.42208 3.18579 9.15817C3.30824 8.89427 3.4868 8.66025 3.709 8.47246L10.709 2.47346C11.07 2.16836 11.5274 2.00098 12 2.00098C12.4726 2.00098 12.93 2.16836 13.291 2.47346L20.291 8.47246C20.5132 8.66025 20.6918 8.89427 20.8142 9.15817C20.9367 9.42208 21.0001 9.70952 21 10.0005V19.0005C21 19.5309 20.7893 20.0396 20.4142 20.4147C20.0391 20.7897 19.5304 21.0005 19 21.0005H5C4.46957 21.0005 3.96086 20.7897 3.58579 20.4147C3.21071 20.0396 3 19.5309 3 19.0005V10.0005Z" stroke="#28315C" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+    
+                      <div class="aside-basket__two-item-block">
+                        <p class="body__20 aside-basket__two-item__text">
+                          Доставка на дом
+                        </p>
+                        <span class="body__16 aside-basket__two-item__alt">
+                          CDEK 1-3 дня, бесплатно
+                        </span>
+                      </div>
+                    </div>
+                    <div class="aside-basket__two-item aside-basket__two-item__alt">
+                      <span class="aside-basket__two-item__img">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10C20 14.993 14.461 20.193 12.601 21.799C12.4277 21.9293 12.2168 21.9998 12 21.9998C11.7832 21.9998 11.5723 21.9293 11.399 21.799C9.539 20.193 4 14.993 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#28315C" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#28315C" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+    
+                      <div class="aside-basket__two-item-block">
+                        <p class="body__20 aside-basket__two-item__text">
+                          Пункт выдачи
+                        </p>
+                        <span class="body__16 aside-basket__two-item__alt">
+                          CDEK, бесплатно
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+                  <div class="order-data__block-record">
+                    <!-- Город -->
+                    <div class="dropdown-container" data-dropdown="city">
+                      <label class="label-def adress-city">
+                        <p class="body__20 label-def__text">
+                          Город
+                          <span class="label-star body__small-02">*</span>
+                        </p>
+                        <input type="text" 
+                              placeholder="Москва" 
+                              class="input-def body__20 dropdown-input" 
+                              data-dropdown-input="city"
+                              autocomplete="off">
+                        
+                        <div class="dropdown-city dropdown-def dropdown-list" data-dropdown-list="city">
+                          <p class="dropdown-city__item dropdown-def__item" data-value="Москва">Москва</p>
+                          <p class="dropdown-city__item dropdown-def__item" data-value="Санкт-Петербург">Санкт-Петербург</p>
+                          <p class="dropdown-city__item dropdown-def__item" data-value="Тюмень">Тюмень</p>
+                          <p class="dropdown-city__item dropdown-def__item" data-value="Екатеринбург">Екатеринбург</p>
+                          <p class="dropdown-city__item dropdown-def__item" data-value="Казань">Казань</p>
+                        </div>
+                      </label>
+
+                      <span class="dropdown__svg">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <!-- Улица, дом -->
+                    <div class="dropdown-container" data-dropdown="street">
+                      <label class="label-def adress-street">
+                        <p class="body__20 label-def__text">
+                          Улица, дом
+                          <span class="label-star body__small-02">*</span>
+                        </p>
+                        <input type="text" 
+                              placeholder="ул. Ленина, д. 1" 
+                              class="input-def body__20 dropdown-input" 
+                              data-dropdown-input="street"
+                              autocomplete="off">
+                        
+                        <div class="dropdown-street dropdown-def dropdown-list" data-dropdown-list="street">
+                          <p class="dropdown-street__item dropdown-def__item" data-value="ул. Ленина, д. 1">ул. Ленина, д. 1</p>
+                          <p class="dropdown-street__item dropdown-def__item" data-value="ул. Советская, д. 5">ул. Советская, д. 5</p>
+                          <p class="dropdown-street__item dropdown-def__item" data-value="пр. Мира, д. 10">пр. Мира, д. 10</p>
+                          <p class="dropdown-street__item dropdown-def__item" data-value="ул. Гагарина, д. 15">ул. Гагарина, д. 15</p>
+                        </div>
+                      </label>
+
+                      <span class="dropdown__svg">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <!-- Квартира -->
+                    <div class="dropdown-container" data-dropdown="room">
+                      <label class="label-def adress-room">
+                        <p class="body__20 label-def__text">
+                          Квартира
+                          <span class="label-star body__small-02">*</span>
+                        </p>
+                        <input type="text" 
+                              placeholder="кв. 10" 
+                              class="input-def body__20 dropdown-input" 
+                              data-dropdown-input="room"
+                              autocomplete="off">
+                        
+                        <div class="dropdown-room dropdown-def dropdown-list" data-dropdown-list="room">
+                          <p class="dropdown-room__item dropdown-def__item" data-value="кв. 1">кв. 1</p>
+                          <p class="dropdown-room__item dropdown-def__item" data-value="кв. 5">кв. 5</p>
+                          <p class="dropdown-room__item dropdown-def__item" data-value="кв. 10">кв. 10</p>
+                          <p class="dropdown-room__item dropdown-def__item" data-value="кв. 15">кв. 15</p>
+                          <p class="dropdown-room__item dropdown-def__item" data-value="кв. 20">кв. 20</p>
+                        </div>
+                      </label>
+
+                      <span class="dropdown__svg">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+                    
+                    <label class="label-def body__20">
+                      <p class="body__20 label-def__text">
+                        Комментарий курьеру
+                      </p>
+                      <textarea name="" id="" placeholder="Например: домофон не работает, позвоните за 5 минут" class="textarea-def body__20"></textarea>
+                    </label>
+                  </div>
+
+                  <p class="order-data__block-record__necessarily body__16">
+                    <span class="label-star body__small-02">
+                      *
+                    </span>
+                    — обязательные поля
+                  </p>
+                </div>
+
+                <!--  -->
+                <div class="container-order-data__block">
+                  <div class="order-data__block-head">
+                    <span class="order-data__block-head__img">
+                      <img src="src/img/card.svg" alt="">
+                    </span>
+                    <p class="order-data__block-head__title title__26">
+                      Способ оплаты
+                    </p>
+                  </div>
+
+                  <!-- копия с сart -->
+                  <div class="aside-basket__three-block aside-basket__three aside-basket__three__alt">
+                    <div class="aside-basket__two-item">
+                      <p class="body__20 aside-basket__two-item__text">
+                        Банковская карта
+                      </p>
+
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/mir.svg" alt="">
+                      </span>
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/viza.svg" alt="">
+                      </span>
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/master.svg" alt="">
+                      </span>
+                    </div>
+
+                    <div class="aside-basket__two-item">
+                      <p class="body__20 aside-basket__two-item__text">
+                        СБП (Система быстрых платежей)
+                      </p>
+
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/spb__03.svg" alt="">
+                      </span>
+                    </div>
+
+                    <div class="aside-basket__two-item">
+                      <p class="body__20 aside-basket__two-item__text">
+                        Яндекс Pay
+                      </p>
+
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/spb__02.svg" alt="">
+                      </span>
+                    </div>
+
+                    <div class="aside-basket__two-item">
+                      <p class="body__20 aside-basket__two-item__text">
+                        Яндекс Сплит
+                      </p>
+
+                      <span class="aside-basket__two-item__card">
+                        <img src="src/img/yandex__split__02.svg" alt="">
+                      </span>
+                    </div>
+
+                    <div class="aside-basket__three-block__down">
+                      <span class="aside-basket__three-block__down-img">
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.3327 8.66664C13.3327 12 10.9993 13.6666 8.22602 14.6333C8.08079 14.6825 7.92304 14.6802 7.77935 14.6266C4.99935 13.6666 2.66602 12 2.66602 8.66664V3.99997C2.66602 3.82316 2.73625 3.65359 2.86128 3.52857C2.9863 3.40355 3.15587 3.33331 3.33268 3.33331C4.66602 3.33331 6.33268 2.53331 7.49268 1.51997C7.63392 1.39931 7.81358 1.33301 7.99935 1.33301C8.18511 1.33301 8.36478 1.39931 8.50602 1.51997C9.67268 2.53997 11.3327 3.33331 12.666 3.33331C12.8428 3.33331 13.0124 3.40355 13.1374 3.52857C13.2624 3.65359 13.3327 3.82316 13.3327 3.99997V8.66664Z" stroke="#9B9EAD" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+
+                      <p class="aside-basket__three-block__text body__16">
+                        Безопасная онлайн-оплата
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="container-order-data__block">
+                  <div class="order-data__block-head">
+                    <span class="order-data__block-head__img">
+                      <img src="src/img/cupon.svg" alt="">
+                    </span>
+                    <p class="order-data__block-head__title title__26">
+                      Бонусы и промокод
+                    </p>
+                  </div>
+
+                  <!-- card-progress-bar copy -->
+                  <div class="card-progress-bar__block card-progress-bar__block__alt">
+                    <div class="card-progress-bar__write-off">
+                      <span class="card-progress-bar__title card-progress-bar__title__alt body__24">
+                        Списать бонусы
+                      </span>
+
+                      <span class="card-progress-bar-text lable__18-m">
+                        <span class="card-progress-bar-text_item">
+                          420
+                        </span>
+                        ₽
+                      </span>
+                    </div>  
+                    
+                    <div class="card-progress-bar">
+                      <div class="card-progress-bar__active">
+                        <div class="card-progress-bar__toddler"></div>
+                      </div>
+                    </div>
+
+                    <div class="card-progress-bar__quantity">
+                      <span class="card-progress-bar__quantity-from body__16">
+                        0₽
+                      </span>
+
+                      <span class="card-progress-bar__quantity-to body__16">
+                        <span class="card-progress-bar__quantity-to__item">
+                          805
+                        </span>
+                          ₽
+                      </span>
+                    </div> 
+                  </div>
+
+                  <!-- container-basket__promo copy -->
+                  <div class="container-basket__promo container-basket__promo__alt">
+                    <span class="body__24 container-basket__promo-title">
+                      Промокод
+                    </span>
+
+                    <div class="container-basket__promo-block">
+                      <input type="text" class="container-basket__promo-input body__16" placeholder="Введите промокод">
+
+                      <button class="btn-primary">
+                        <p class="lable__20">
+                          Применить
+                        </p>
+
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="container-order-data__block">
+                  <label class="label-def body__20 label-def__alt">
+                    <p class="title__26 label-def__text">
+                      Комментарий к заказу
+                    </p>
+                    <textarea name="" id="" placeholder="Комментарий для курьера или службы доставки" class="textarea-def body__20"></textarea>
+                  </label>
+                </div>
+              </div>
+
+              <div class="container-order-result container-order-data__block">
+                <div class="title__26 container-order-result__title">
+                  Ваш заказ
+                </div>
+
+                <div class="container-order-result_block">
+                  <div class="container-order-result_block-box">
+                    <div class="container-order-result_block-box__hgroup">
+                      <p class="body__20 container-order-result__hgroup-title">
+                        NordMile ОМЕГА-3 RTG Premium для иммунитета c экстрактом женьшеня
+                      </p>
+  
+                      <span class="body__16 container-order-result__hgroup-text">
+                        2 шт.
+                      </span>
+                    </div>
+  
+                    <span class="container-order-result_block-box__span body__20">
+                      6 440 ₽
+                    </span>
+                  </div>
+
+                  <div class="container-order-result_block-box">
+                    <div class="container-order-result_block-box__hgroup">
+                      <p class="body__20 container-order-result__hgroup-title">
+                        NordMile ОМЕГА-3 RTG Premium для иммунитета c экстрактом женьшеня
+                      </p>
+  
+                      <span class="body__16 container-order-result__hgroup-text">
+                        2 шт.
+                      </span>
+                    </div>
+  
+                    <span class="container-order-result_block-box__span body__20">
+                      6 440 ₽
+                    </span>
+                  </div>
+                </div>
+
+                <!-- aside-basket__one  copy  -->
+                <div class="aside-basket__one">
+                  <div class="aside-basket__one__alt aside-basket__one">
+                    <div class="aside-basket__one-box">
+                      <p class="body__24 aside-basket__one-box-title">
+                        Сумма товаров
+                      </p>
+                      <p class="lable__20 aside-basket__one-box-text">
+                        10 960 ₽
+                      </p>
+                    </div>
+                    <div class="aside-basket__one-box">
+                      <p class="body__20 aside-basket__one-box-title">
+                        Промокод
+                      </p>
+                      <p class="lable__20 aside-basket__one-box-text aside-basket__one-box-text__blue">
+                        -764 ₽
+                      </p>
+                    </div>
+                    <div class="aside-basket__one-box">
+                      <p class="body__20 aside-basket__one-box-title">
+                        Бонусы
+                      </p>
+                      <p class="lable__20 aside-basket__one-box-text aside-basket__one-box-text__blue">
+                        -120₽
+                      </p>
+                    </div>
+                    <div class="aside-basket__one-box">
+                      <p class="body__20 aside-basket__one-box-title">
+                        Доставка
+                      </p>
+                      <p class="lable__20 aside-basket__one-box-text aside-basket__one-box-text__green">
+                        Бесплатно
+                      </p>
+                    </div>
+                  </div>
+
+                    <div class="aside-basket__one-box aside-basket__one-box__alt2">
+                      <p class="title__26 aside-basket__one-box-title">
+                        Итого
+                      </p>
+                      <p class="title__48 aside-basket__one-box-text">
+                        10 196 ₽
+                      </p>
+                    </div>
+                </div>
+
+                <!-- box-label copy -->
+                <label class="box-label body__small">
+                  <input type="checkbox" class="real-checkbox">
+                  <span class="custom-checkbox"></span>
+                  Я соглашаюсь с Политикой конфиденциальности и обработкой моих персональных данных.
+                </label>
+
+                <button class="btn-primary__alt" data-modal-open="#thanksForTheOrder">
+                  <p class="lable__20">
+                    Оформить заказ
+                  </p>
+
+                  <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <div class="footer">
+        
+        <div class="footer-up">
+          <a class="logo-footer">
+            <img src="src/img/logo__footer.svg" alt="" class="logo-footer__img">
+          </a>
+          <div class="footer-up__container">
+
+            <div class="foo-up__one">
+              <div class="foo-up__one-box">
+                <p class="foo-up__one-box__text lable__18-m">
+                  БАД. Не является лекарственным средством
+                </p>
+                <p class="foo-up__one-box__info body__small-02">
+                  Общество с ограниченной ответственностью  «Омега-Си» <br>
+                  Юридический адрес: 685000, г. Магадан, ул.  Портовая, 1 <br>
+                  ИНН: 4900000508  КПП: 490001001  ОГРН: 1214900000150
+                </p>
+              </div>
+    
+              <div class="foo-up__connection">
+                <p class="foo-up__connection-text lable__18-m">
+                  Мы в соцсетях
+                </p>
+    
+                <div class="foo-up__social-icon">
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/tg.svg" alt="" class="social-icon__link-img">
+                  </a>
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/vk.svg" alt="" class="social-icon__link-img">
+                  </a>
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
+                  </a>
+                </div>
+              </div>
+            </div>
+  
+            <nav class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="catalog.html" class="footer-nav__list-item__link body__16-alt">
+                    Каталог
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="about.html" class="footer-nav__list-item__link body__16-alt">
+                    О компании
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="media.html" class="footer-nav__list-item__link body__16-alt">
+                    Мы в медиа
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Полезные материалы
+                  </a>
+                </li>
+              </ul>
+              
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="loyalty__program.html" class="footer-nav__list-item__link body__16-alt">
+                    Программа лояльности
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="reviews.html" class="footer-nav__list-item__link body__16-alt">
+                    Отзывы
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="faq.html" class="footer-nav__list-item__link body__16-alt">
+                    FAQ
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="contacts.html" class="footer-nav__list-item__link body__16-alt">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+  
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Купить на
+  
+                    <span class="footer-nav__list-item__link-img">
+                      <img src="src/img/ozon.svg" alt="">
+                    </span>
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="privacy__policy.html" class="footer-nav__list-item__link body__16-alt">
+                    Политика <br>
+                    конфиденциальности
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Обработка <br>
+                    персональных данных
+                  </a>
+                </li>
+              </ul>
+            </nav>
+  
+            <div class="foo-up__two">
+              <p class="foo-up__two-text lable__18-m">
+                Связаться с нами
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                8(4132) 20-05-30 доб. 569
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                main@sea-wolf.ru
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                685000, г. Магадан, ул.  Портовая, 1
+              </p>
+  
+              <a href="" class="foo-up__two-link">
+                <img src="src/img/tg.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="foo-up__one-box__mobile">
+          <p class="foo-up__one-box__text lable__18-m">
+            БАД. Не является лекарственным средством
+          </p>
+          <p class="foo-up__one-box__info body__small-02">
+            Общество с ограниченной ответственностью  «Омега-Си» <br>
+            Юридический адрес: 685000, г. Магадан, ул.  Портовая, 1 <br>
+            ИНН: 4900000508  КПП: 490001001  ОГРН: 1214900000150
+          </p>
+        </div>
+
+        <div class="footer-down">
+          <span class="footer-down__date body__16">
+            © 2025 NORD MILE
+          </span>
+
+          <div class="footer-down__card">
+            <span class="footer-down__card-img">
+              <img src="src/img/mir.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/viza.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/master.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/master__02.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/yandex__pay.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/yandex__split.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/spb.svg" alt="">
+            </span>
+          </div>
+
+          <span class="footer-down__company body__16">
+            Request Design
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--  -->
+  <!-- item added to cart -->
+  <div class="modal" id="thanksForTheOrder">
+    <div class="modal-content">
+      <div class="modal-content-style itemAddedToCart">
+        <button class="close-modal" data-modal-close>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+
+        <div class="modal-bonus-head">
+          <div class="title__48 modal-bonus-head-title">
+            Спасибо за заказ!
+          </div>
+
+          <p class="body__24 modal-bonus-head-text">
+            Мы получили ваш заказ и начали его обработку. Подробности отправлены на email и доступны в Личном кабинете.
+          </p>
+        </div>
+
+        <div class="itemAddedToCart-block__btn">
+          <a href="index.html" class="btn-secondary">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+            <p class="lable__20">
+              На главную
+            </p>
+          </a>
+          <a href="catalog.html" class="btn-primary__alt">
+            <p class="lable__20">
+              Смотреть каталог
+            </p>
+
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- burger-menu -->
+  <div class="burger-menu">
+    <div class="burger-content">
+      
+      <div class="burger-up">
+        <div class="user-nav">
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img user-nav__link-img__item">
+              <img src="src/img/shop__bag.svg" alt="">
+
+              <span class="block-header__shop__counter">
+                123
+              </span>
+            </span>
+            Корзина
+          </a>
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img">
+              <img src="src/img/personal__account.svg" alt="">
+            </span>
+            Личный кабинет
+          </a>
+        </div>
+        <span class="menu-close">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <nav class="nav-burger">
+        <a href="catalog.html" class="lable__18-m nav-burger__list-item__link">
+          Каталог
+        </a>
+  
+        <ul class="nav-burger__list">
+          <li class="nav-burger__list-item">
+            <a href="about.html" class="nav-burger__list-item__link lable__18">
+              О компании
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="media.html" class="nav-burger__list-item__link lable__18">
+              Медиа о нас
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="" class="nav-burger__list-item__link lable__18">
+              Полезные материалы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="loyalty__program.html" class="nav-burger__list-item__link lable__18">
+              Программа лояльности
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="reviews.html" class="nav-burger__list-item__link lable__18">
+              Отзывы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="faq.html" class="nav-burger__list-item__link lable__18">
+              FAQ
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="contacts.html" class="nav-burger__list-item__link lable__18">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="burger-menu__connection">
+        <p class="burger-menu__connection-text lable__18-m">
+          Мы в соцсетях
+        </p>
+  
+        <div class="burger-menu__social-icon">
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/tg.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/vk.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="src/js/input__errors.js"></script>
+  <script src="src/js/modal__all.js"></script>
+  <script src="src/js/progress-bar__card.js"></script>
+  <script src="src/js/dropdown__alt.js"></script>
+  <script src="src/js/select__value.js"></script>
+</body>
+</html>

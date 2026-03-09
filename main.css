@@ -20,6 +20,37 @@
 @import url(./src/style/section__why-us.css);
 @import url(./src/style/modal__quiz.css);
 @import url(./src/style/catalog__page.css);
+@import url(./src/style/section__card.css);
+@import url(./src/style/section__basket.css);
+@import url(./src/style/section__green.css);
+@import url(./src/style/section__order.css);
+@import url(./src/style/section__account.css);
+@import url(./src/style/section__profile.css);
+@import url(./src/style/section__apporoach.css);
+@import url(./src/style/section__advantages.css);
+@import url(./src/style/section__why.css);
+@import url(./src/style/section__video.css);
+@import url(./src/style/section__quality.css);
+@import url(./src/style/section__care.css);
+@import url(./src/style/section__media.css);
+@import url(./src/style/section__medai-details.css);
+@import url(./src/style/section__profi.css);
+@import url(./src/style/section__reviews.css);
+@import url(./src/style/section__faq.css);
+@import url(./src/style/section__important.css);
+@import url(./src/style/section__loyality.css);
+@import url(./src/style/section__rules.css);
+@import url(./src/style/section__use.css);
+@import url(./src/style/section__look.css);
+@import url(./src/style/section__contacts.css);
+@import url(./src/style/section__map.css);
+@import url(./src/style/section__privacy.css);
+@import url(./src/style/modal__question.css);
+@import url(./src/style/modal__review.css);
+@import url(./src/style/section__registration.css);
+@import url(./src/style/modal__bonus.css);
+@import url(./src/style/modal__add-product.css);
+@import url(./src/style/section__preloader.css);
 
 /*  */
 
@@ -185,6 +216,15 @@
     font-size: 1.4rem;
   }
 }
+.lable__16 {
+  font-size: 1.6rem;
+  line-height: 120%;
+  font-weight: 400;
+
+  @media (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
 .body__24 {
   font-size: 2.4rem;
   line-height: 120%;
@@ -305,7 +345,7 @@
   }
 }
 ._container-alt {
-  padding: 16rem 4rem 0;
+  padding: 8rem 4rem 0;
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
@@ -558,6 +598,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--unit-10);
 
   transition: 0.3s ease;
@@ -615,6 +656,10 @@
   align-items: center;
   gap: var(--unit-10);
 
+  p {
+    white-space: nowrap;
+  }
+
   transition: 0.3s ease;
 
   svg {
@@ -667,8 +712,7 @@
 
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -679,8 +723,24 @@
   justify-content: center;
   align-items: center;
 
+  overflow-y: auto;
+  overflow-x: hidden;
   opacity: 0;
+
   visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/*  */
+.modal__alt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 48rem;
+
   transition:
     opacity 0.3s ease,
     visibility 0.3s ease;
@@ -698,4 +758,67 @@
 
 .modal.modal-active .modal-content {
   transform: scale(1);
+}
+
+.modal-content {
+  transition: transform 0.3s ease;
+  max-height: calc(100vh - 5rem);
+
+  position: relative;
+}
+
+/*  */
+
+.modal-content__alt {
+}
+
+.modal-content-style__alt {
+  background-color: var(--white);
+  border-radius: var(--unit-32);
+  padding: var(--unit-40);
+  border: 0.2rem solid var(--line);
+
+  @media (max-width: 767px) {
+    padding: var(--unit-40) var(--unit-16) var(--unit-20);
+    border-radius: var(--unit-12);
+  }
+}
+.modal-content-style {
+  background-color: var(--white);
+  border-radius: var(--unit-32);
+  padding: var(--unit-40);
+
+  @media (max-width: 767px) {
+    padding: var(--unit-40) var(--unit-16) var(--unit-20);
+    border-radius: var(--unit-12);
+  }
+}
+
+/*  */
+
+.bread-crumbs {
+  display: flex;
+
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 2rem;
+  }
+}
+.bread-crumbs__back {
+  color: var(--grey-text);
+}
+.bread-crumbs__now {
+  color: var(--primary);
+}
+
+/* input__erros.js */
+.input-error {
+  color: #e4083c;
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.input-error-active {
+  border-color: #e4083c !important;
 }

@@ -1,0 +1,142 @@
+._container {
+}
+.contianer-why {
+  position: relative;
+
+  padding: 4rem;
+
+  @media (max-width: 767px) {
+    padding: 2rem 1.6rem;
+  }
+}
+.container-why__content {
+  max-width: 75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @media (max-width: 767px) {
+    gap: 2rem;
+  }
+}
+.container-why__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  inset: 0;
+
+  img {
+    border-radius: 4.8rem;
+
+    @media (max-width: 767px) {
+      border-radius: 1.4rem;
+    }
+  }
+}
+.container-why__box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  background: #ffffff66;
+  backdrop-filter: blur(20px);
+  border-radius: 2.4rem;
+
+  padding: 1.2rem 2.4rem;
+  width: fit-content;
+
+  @media (max-width: 767px) {
+  }
+}
+.container-why__box-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.container-why__box-text {
+  color: var(--primary);
+}
+.container-why__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  color: var(--primary);
+
+  
+}
+.container-why__head__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.container-why__block {
+  display: flex;
+  gap: 2rem;
+
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  background-color: var(--white);
+  width: fit-content;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 1.2rem;
+    border-radius: 1.4rem;
+  }
+}
+.container-why__block-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #dcffcc;
+
+  @media (max-width: 767px) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  img {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    @media (max-width: 767px) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+.container-why__block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.container-why__block-content-title {
+  color: var(--primary);
+
+  @media (max-width: 767px) {
+    font-size: 1.8rem;
+    font-weight: 600 !important;
+  }
+}
+.container-why__block-content-span {
+  color: var(--primary);
+}
+.container-why__block-content-text {
+  color: var(--grey-text);
+
+  @media (max-width: 767px) {
+    font-size: 1.6rem !important;
+  }
+}

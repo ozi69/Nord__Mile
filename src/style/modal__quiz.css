@@ -1,17 +1,8 @@
-.modal-content {
+.modal__quiz {
   width: 80rem;
-  border-radius: var(--unit-32);
-  padding: var(--unit-40);
-  background-color: var(--white);
-
-  position: relative;
-
-  transition: transform 0.3s ease;
 
   @media (max-width: 767px) {
     width: 34rem;
-    padding: var(--unit-40) var(--unit-16) var(--unit-20);
-    border-radius: var(--unit-12);
   }
 }
 .close-modal {

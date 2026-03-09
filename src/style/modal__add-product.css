@@ -1,0 +1,24 @@
+.itemAddedToCart {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 67rem;
+
+  @media (max-width: 767px) {
+    max-width: 34rem;
+  }
+}
+.itemAddedToCart-block__btn {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.btn-secondary {
+}

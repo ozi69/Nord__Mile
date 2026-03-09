@@ -16,14 +16,14 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header-wrapper">
+    <header>
       <div class="header header__container-alt">
         <div class="header-block__start">
           <div class="burger">
             <img src="src/img/burger.svg" alt="" class="burger-img">
           </div>
   
-          <a class="logo-header">
+          <a href="index.html" class="logo-header">
             <img src="src/img/logo__header.svg" alt="" class="logo-header__img">
           </a>
         </div>
@@ -36,17 +36,17 @@
               </a>
             </li>
             <li class="nav-header__list-item">
-              <a href="" class="nav-header__list-item__link lable__18-m">
+              <a href="about.html" class="nav-header__list-item__link lable__18-m">
                 О компании
               </a>
             </li>
             <li class="nav-header__list-item">
-              <a href="" class="nav-header__list-item__link lable__18-m">
+              <a href="blog.html" class="nav-header__list-item__link lable__18-m">
                 Блог
               </a>
             </li>
             <li class="nav-header__list-item">
-              <a href="" class="nav-header__list-item__link lable__18-m">
+              <a href="reviews.html" class="nav-header__list-item__link lable__18-m">
                 Отзывы
               </a>
             </li>
@@ -54,8 +54,12 @@
         </nav>
 
         <div class="block-header-icon">
-          <a href="" class="block-header__shop block-header-item">
+          <a href="cart.html" class="block-header__shop block-header-item">
             <img src="src/img/shop__bag.svg" alt="" class="block-header__shop-img">
+
+            <span class="block-header__shop__counter">
+              12
+            </span>
           </a>
           <a href="" class="block-header__person block-header-item">
             <img src="src/img/personal__account.svg" alt="" class="block-header__person-img">
@@ -312,7 +316,7 @@
                     </p>
     
                     <div class="card-catalog__content-info">
-                      <a href=""  class="btn-primary">
+                      <a href="card.html"  class="btn-primary">
                         <p class="lable__20">
                           Заказать
                         </p>
@@ -907,7 +911,7 @@
               <div class="container-catalog__block">
                 <button class="btn-secondary container-catalog__block-btn">
                   <p class="lable__20">
-                    Показать все
+                    Показать ещё
                   </p>
 
                   <span>
@@ -1377,17 +1381,17 @@
             <nav class="footer-nav">
               <ul class="footer-nav__list">
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="catalog.html" class="footer-nav__list-item__link body__16-alt">
                     Каталог
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="about.html" class="footer-nav__list-item__link body__16-alt">
                     О компании
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="media.html" class="footer-nav__list-item__link body__16-alt">
                     Мы в медиа
                   </a>
                 </li>
@@ -1400,22 +1404,22 @@
               
               <ul class="footer-nav__list">
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="loyalty__program.html" class="footer-nav__list-item__link body__16-alt">
                     Программа лояльности
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="reviews.html" class="footer-nav__list-item__link body__16-alt">
                     Отзывы
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="faq.html" class="footer-nav__list-item__link body__16-alt">
                     FAQ
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="contacts.html" class="footer-nav__list-item__link body__16-alt">
                     Контакты
                   </a>
                 </li>
@@ -1432,7 +1436,7 @@
                   </a>
                 </li>
                 <li class="footer-nav__list-item">
-                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                  <a href="privacy__policy.html" class="footer-nav__list-item__link body__16-alt">
                     Политика <br>
                     конфиденциальности
                   </a>
@@ -1608,7 +1612,103 @@
     </div>
   </div>
 
+
+  <!-- burger-menu -->
+  <div class="burger-menu">
+    <div class="burger-content">
+      
+      <div class="burger-up">
+        <div class="user-nav">
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img user-nav__link-img__item">
+              <img src="src/img/shop__bag.svg" alt="">
+
+              <span class="block-header__shop__counter">
+                123
+              </span>
+            </span>
+            Корзина
+          </a>
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img">
+              <img src="src/img/personal__account.svg" alt="">
+            </span>
+            Личный кабинет
+          </a>
+        </div>
+        <span class="menu-close">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <nav class="nav-burger">
+        <a href="catalog.html" class="lable__18-m nav-burger__list-item__link">
+          Каталог
+        </a>
+  
+        <ul class="nav-burger__list">
+          <li class="nav-burger__list-item">
+            <a href="about.html" class="nav-burger__list-item__link lable__18">
+              О компании
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="media.html" class="nav-burger__list-item__link lable__18">
+              Медиа о нас
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="" class="nav-burger__list-item__link lable__18">
+              Полезные материалы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="loyalty__program.html" class="nav-burger__list-item__link lable__18">
+              Программа лояльности
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="reviews.html" class="nav-burger__list-item__link lable__18">
+              Отзывы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="faq.html" class="nav-burger__list-item__link lable__18">
+              FAQ
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="contacts.html" class="nav-burger__list-item__link lable__18">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="burger-menu__connection">
+        <p class="burger-menu__connection-text lable__18-m">
+          Мы в соцсетях
+        </p>
+  
+        <div class="burger-menu__social-icon">
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/tg.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/vk.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="/src/js/dropdown.js"></script>
+  <script src="/src/js/catalog__btn.js"></script>
   <script src="/src/js/modal__all.js"></script>
   <script src="/src/js/swiper__all.js"></script>
   <script src="/src/swiper/swiper-bundle.min.js"></script>

@@ -1,0 +1,194 @@
+#modalReview {
+  .modal__review {
+    width: 80rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media (max-width: 767px) {
+      width: 34rem;
+      gap: 2rem;
+    }
+  }
+}
+
+.modal__review-title {
+  color: var(--primary);
+}
+.modal__review-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  .textarea-def {
+    height: 26rem;
+
+    @media (max-width: 767px) {
+      height: 18.5rem;
+    }
+  }
+}
+.modal__review-block-title {
+  color: var(--primary);
+}
+.modal__review-block-title_red {
+  color: var(--red);
+}
+.modal__review-block__grade {
+  display: flex;
+  gap: 1.2rem;
+
+  svg {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    @media (max-width: 767px) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+/* Активная звезда (после клика) */
+.modal__review-block__grade-star.active path {
+  fill: #ffd700;
+  stroke: #ffd700;
+}
+
+/* Hover эффект для звезд */
+.modal__review-block__grade-star.hover path {
+  fill: #ffd700;
+  stroke: #ffd700;
+}
+.label-def__block {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--grey-text);
+}
+.label-def__block-counter {
+}
+.modal__review-block_add {
+  display: flex;
+  width: 100%;
+  gap: 1.2rem;
+
+  overflow-x: scroll;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.modal__review-block_add-img {
+  min-width: 26rem;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 3.2rem;
+  border: 0.2rem solid var(--line);
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  @media (max-width: 767px) {
+    min-width: 8.4rem;
+    width: 8.4rem;
+    height: 8.4rem;
+
+    border-radius: 1.4rem;
+  }
+
+  img {
+    width: 13rem;
+    height: 22rem;
+    transition: 0.3s ease;
+
+    @media (max-width: 767px) {
+      width: 4.4rem;
+      height: 7rem;
+    }
+  }
+
+  &:hover img {
+    opacity: 0.4;
+  }
+
+  &:hover .delete__modal__review {
+    opacity: 1;
+  }
+}
+
+.delete__modal__review {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  @media (max-width: 767px) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.modal__review-block_add__item {
+  min-width: 26rem;
+  height: 26rem;
+  border-radius: 3.2rem;
+  border: 0.2rem solid var(--line);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    min-width: 8.4rem;
+    width: 8.4rem;
+    height: 8.4rem;
+
+    border-radius: 1.4rem;
+  }
+}
+.modal__review-block_add__item__img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.modal__review-block__text {
+  padding: 2.4rem;
+  background: linear-gradient(180deg, #edf3f8 0%, #f3f7f9 100%);
+  border-radius: 3.2rem;
+  color: var(--grey-text);
+
+  text-align: center;
+}
+.modal__review-block__btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    gap: 1.2rem;
+  }
+}
+.modal__review-block-add__text {
+  color: var(--grey-text);
+}
+.label_dow__photo {
+  color: var(--grey-text);
+}

@@ -1,0 +1,18 @@
+.contianer-important {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 122rem;
+  margin: 0 auto;
+}
+.contianer-important-title {
+  color: var(--primary);
+}
+.contianer-important__block {
+  color: var(--grey-text);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

@@ -1,0 +1,38 @@
+.container-privacy {
+  max-width: 122rem;
+
+  margin: 0 auto;
+}
+.container-privacy-title {
+  color: var(--primary);
+  text-align: center;
+
+  margin-bottom: 8rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 4rem;
+
+    text-align: unset;
+  }
+}
+.container-privacy__block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  color: var(--primary);
+}
+.container-privacy__block-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container-privacy__block-box-title {
+}
+.container-privacy__block-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.container-privacy__block-box-list__item {
+}

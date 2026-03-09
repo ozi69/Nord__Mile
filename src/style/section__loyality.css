@@ -1,0 +1,121 @@
+.core-loyality {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @media (max-width: 767px) {
+    gap: 4rem;
+  }
+}
+.core-loyality__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+}
+.core-loyality__head-title {
+  color: var(--primary);
+}
+.core-loyality__head-text {
+  color: var(--grey-text);
+}
+
+/*  */
+
+.container-loyality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  @media (max-width: 767px) {
+    gap: 2rem;
+  }
+}
+.container-loyality__head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  color: var(--primary);
+
+  text-align: center;
+}
+.container-loyality__block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.loyality-card {
+  padding: 4rem;
+  border-radius: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @media (max-width: 767px) {
+    gap: 2rem;
+    padding: 1.2rem;
+    border-radius: 1.4rem;
+  }
+
+  &:nth-child(1) {
+    background-color: var(--purple);
+  }
+  &:nth-child(2) {
+    background-color: var(--beige);
+  }
+  &:nth-child(3) {
+    background-color: var(--light-blue);
+  }
+  &:nth-child(4) {
+    background-color: #dcffcc;
+  }
+}
+
+.loyality-card__img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white);
+
+  @media (max-width: 767px) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  img {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    @media (max-width: 767px) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+.loyality-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--primary);
+}
+
+.loyality-card__head-title {
+  @media (max-width: 767px) {
+    font-weight: 600 !important;
+  }
+}

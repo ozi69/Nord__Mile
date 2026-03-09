@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация профиля</title>
+
+  <link rel="stylesheet" href="main.css">
+
+  <!-- SEO-Parameters -->
+  <meta name="keywords" content="ключевые слова">
+  <meta name="description" content="описание">
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="путь к иконке">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header header__container-alt">
+        <div class="header-block__start">
+          <div class="burger">
+            <img src="src/img/burger.svg" alt="" class="burger-img">
+          </div>
+  
+          <a href="index.html" class="logo-header">
+            <img src="src/img/logo__header.svg" alt="" class="logo-header__img">
+          </a>
+        </div>
+
+        <nav class="nav-header">
+          <ul class="nav-header__list">
+            <li class="nav-header__list-item">
+              <a href="catalog.html" class="nav-header__list-item__link lable__18-m">
+                Каталог
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="about.html" class="nav-header__list-item__link lable__18-m">
+                О компании
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="blog.html" class="nav-header__list-item__link lable__18-m">
+                Блог
+              </a>
+            </li>
+            <li class="nav-header__list-item">
+              <a href="reviews.html" class="nav-header__list-item__link lable__18-m">
+                Отзывы
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="block-header-icon">
+          <a href="cart.html" class="block-header__shop block-header-item">
+            <img src="src/img/shop__bag.svg" alt="" class="block-header__shop-img">
+
+            <span class="block-header__shop__counter">
+              12
+            </span>
+          </a>
+          <a href="" class="block-header__person block-header-item">
+            <img src="src/img/personal__account.svg" alt="" class="block-header__person-img">
+          </a>
+        </div>
+      </div>
+    </header>
+  
+    <main class="page">
+      <!-- section-registration -->
+      <section>
+        <div class="_container">
+          <div class="body__16 bread-crumbs">
+            <a href="" class="bread-crumbs__back">
+              Главная/
+            </a>
+            <p class="bread-crumbs__now">
+              Регистрация профиля
+            </p>
+          </div>
+
+
+          <div class="container-registration">
+            <div class="modal__alt" id="CreateAccount">
+              <div class="modal-content__alt">
+                <div class="create-acc modal-content-style__alt">
+                  <div class="create-head">
+                    <div class="create-head-title title__48">
+                      Создайте аккаунт
+                    </div>
+
+                    <p class="body__16 create-head-text">
+                      Выберите удобный способ регистрации
+                    </p>
+                  </div>
+                  
+                  <div class="create-acc__btn">
+                    <button class="create-acc__btn-item"  data-next-modal="RegistrationByPhone">
+                      <div class="create-acc__btn-item__img">
+                        <img src="src/img/tel__reg.svg" alt="">
+                      </div>
+                      <div class="create-acc__btn-item__hgroup">
+                        <span class="body__20 create-acc__btn-item__hgroup-title">
+                          Номер телефона
+                        </span>
+
+                        <p class="body__16 create-acc__btn-item__hgroup-text">
+                          Быстрый вход по SMS-коду
+                        </p>
+                      </div>
+                    </button>
+                    <button class="create-acc__btn-item" data-next-modal="RegByEmail">
+                      <div class="create-acc__btn-item__img">
+                        <img src="src/img/mail__reg.svg" alt="">
+                      </div>
+                      <div class="create-acc__btn-item__hgroup">
+                        <span class="body__20 create-acc__btn-item__hgroup-title">
+                          Email
+                        </span>
+
+                        <p class="body__16 create-acc__btn-item__hgroup-text">
+                          Традиционный способ с паролем
+                        </p>
+                      </div>
+                    </button>
+                  </div>
+
+                  <p class="body__16 create-text-link">
+                    Уже есть аккаунт?
+                    <button class="create-text-btn" data-next-modal="loginByEmail">
+                      Войти
+                    </button>
+                  </p>
+
+                  <p class="body__small create-text">
+                    Регистрируясь, Вы соглашаетесь с Политикой конфиденциальности и обработкой Ваших персональных данных
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal__alt" id="RegistrationByPhone">
+              <div class="modal-content__alt">
+                <div class="RegistrationByPhone modal-content-style__alt">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="CreateAccount">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/tel__reg.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Регистрация по телефону
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Введите ваши данные для создания аккаунта
+                    </p>
+                  </div>
+
+                  <form action="" class="RegistrationByPhone-form">
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Имя
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="text" placeholder="Иван" class="input-def body__20">
+                    </label>
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Телефон
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="tel" placeholder="+7 (___) ___-__-__" class="input-def body__20">
+                      <p class="question-form__label__text body__small">
+                        На этот номер придёт код подтверждения
+                      </p>
+                    </label>
+
+                    <p class="RegistrationByPhone-form-text body__16">
+                      Номер телефона используется для входа в систему
+                    </p>
+
+                    <button class="btn-primary__alt" data-next-modal="phoneСonfirmation">
+                      <p class="lable__20">
+                        Получить код
+                      </p>
+
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+
+                  <p class="question-form__box body__16">
+                    Мы отправим вам SMS с кодом подтверждения. Стандартная стоимость SMS согласно тарифу вашего оператора.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal__alt" id="phoneСonfirmation">
+              <div class="modal-content__alt">
+                <div class="phoneСonfirmation modal-content-style__alt">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="RegistrationByPhone">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/adv__02.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Подтверждение
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Мы отправили код на номер
+                    </p>
+                    
+                    <p class="body__16 RegistrationByPhone-head__title">
+                      +7 (927) 123-45-67
+                    </p>
+                  </div>
+
+                  <div class="phoneСonfirmation-block">
+                    <span class="body__20 phoneСonfirmation-block-title">
+                      Введите код из SMS
+                    </span>
+
+                      <div class="modal__code-group" id="codeGroup">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                      <input type="text" class="code-field body__24" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    </div>
+                  </div>
+
+                  <p class="phoneСonfirmation-box__text body__16">
+                    Отправить код повторно через 58 сек
+                  </p>
+
+                  <p class="question-form__box body__16">
+                    Код действителен в течение 10 минут. Если SMS 
+                    не пришло, проверьте правильность номера.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal__alt" id="registrationСompleted">
+              <div class="modal-content__alt">
+                <div class="registrationСompleted modal-content-style__alt">
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/check.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Регистрация завершена!
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Добро пожаловать в Nord Mile. <br>
+                      Ваш личный кабинет успешно создан.
+                    </p>
+                  </div>
+
+                  <div class="registrationСompleted-blcok">
+                    <div class="registrationСompleted-blcok__box">
+                      <span class="lable__18 registrationСompleted-blcok__box-text">
+                        Ваш аккаунт:
+                      </span>
+
+                      <p class="lable__18 registrationСompleted-blcok__box-tel">
+                        +7 (927) 123-45-67
+                      </p>
+                    </div>
+
+                    <div class="registrationСompleted-blcok__box">
+                      <span class="lable__18 registrationСompleted-blcok__box-text">
+                        Статус:
+                      </span>
+
+                      <div class="registrationСompleted-blcok__box-hgroup">
+                        <span class="registrationСompleted-blcok__box-hgroup__img">
+                          <img src="src/img/check__green.svg" alt="">
+                        </span>
+                        <p class="lable__18 registrationСompleted-blcok__box-hgroup-text">
+                          Подтверждён
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="registrationСompleted-list">
+                    <p class="lable__18-m registrationСompleted-list-title">
+                      Теперь вам доступно:
+                    </p>
+
+                    <div class="registrationСompleted-list__block">
+                      <div class="registrationСompleted-list-item">
+                        <span class="registrationСompleted-list-item__img">
+                          <img src="src/img/check__01.svg" alt="">
+                        </span>
+  
+                        <p class="body__16 registrationСompleted-list-item__text">
+                          Отслеживание статуса заказов
+                        </p>
+                      </div>
+                      <div class="registrationСompleted-list-item">
+                        <span class="registrationСompleted-list-item__img">
+                          <img src="src/img/check__01.svg" alt="">
+                        </span>
+  
+                        <p class="body__16 registrationСompleted-list-item__text">
+                          Накопление и использование бонусов
+                        </p>
+                      </div>
+                      <div class="registrationСompleted-list-item">
+                        <span class="registrationСompleted-list-item__img">
+                          <img src="src/img/check__01.svg" alt="">
+                        </span>
+  
+                        <p class="body__16 registrationСompleted-list-item__text">
+                          История покупок и рекомендации
+                        </p>
+                      </div>
+                      <div class="registrationСompleted-list-item">
+                        <span class="registrationСompleted-list-item__img">
+                          <img src="src/img/check__01.svg" alt="">
+                        </span>
+  
+                        <p class="body__16 registrationСompleted-list-item__text">
+                          Быстрое оформление повторных заказов
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="" class="btn-primary__alt">
+                    <p class="lable__20">
+                      Перейти в личный кабинет
+                    </p>
+
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+
+                  <p class="phoneСonfirmation-box__text body__16">
+                    Или начать покупки в каталоге
+                  </p>
+
+                  <p class="question-form__box body__16">
+                    Спасибо, что выбрали Nord Mile. Мы заботимся 
+                    о вашем здоровье и предлагаем только качественные нутрицевтики.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RegByEmail -->
+
+            <div class="modal__alt" id="RegByEmail">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt RegByEmail">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="CreateAccount">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/tel__reg.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Регистрация по email
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Создайте безопасный аккаунт с паролем
+                    </p>
+                  </div>
+
+                  <form action="" class="RegistrationByPhone-form">
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Имя
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="text" placeholder="Иван" class="input-def body__20">
+                    </label>
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Email
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="email" placeholder="ivan@example.com" class="input-def body__20">
+                      <p class="question-form__label__text body__small">
+                        Используйте email для входа в аккаунт
+                      </p>
+                    </label>
+
+
+                    <label class="label-def label-passwrod">
+                      <p class="body__20 label-def__text">
+                        Пароль
+                        <span class="label-star body__small-02">*</span>
+                      </p>
+
+                      <input 
+                        type="text" 
+                        placeholder="Минимум 8 символов" 
+                        class="input-def input-password-custom body__20"
+                        autocomplete="new-password"
+                      >
+
+                      <div class="progress-bar-block">
+                        <div class="progress-bar__password">
+                          <div class="progress-bar__password-active"></div>
+                        </div>
+                        <span class="progress-bar__tex body__small">
+
+                        </span>
+                      </div>
+
+                      <span class="look__password">
+                        <img src="src/img/eye__open.svg" alt="">
+                      </span>
+                      <span class="not-visible__password">
+                        <img src="src/img/eye__close.svg" alt="">
+                      </span>
+
+                      <div class="lable-password__block">
+                        <p class="question-form__label__text body__small">
+                          Используйте буквы, цифры и символы для надёжности
+                        </p>
+                        <button class="body__small lable-password__block-btn" data-next-modal="passwordRecovery">
+                          Забыли пароль?
+                        </button>
+                      </div>
+                    </label>
+
+
+                    <button class="btn-primary__alt" data-next-modal="phoneСonfirmation">
+                      <p class="lable__20">
+                        Войти в личный кабинет
+                      </p>
+
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <p class="question-form__box body__16">
+                      На указанный email будет отправлено письмо 
+                      с подтверждением регистрации
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- email-loginByEmail -->
+
+            <div class="modal__alt" id="loginByEmail">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt RegByEmail">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="CreateAccount">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/tel__reg.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Вход по email
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Создайте безопасный аккаунт с паролем
+                    </p>
+                  </div>
+
+                  <form action="" class="RegistrationByPhone-form">
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Имя
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="text" placeholder="Иван" class="input-def body__20">
+                    </label>
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Email
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="tel" placeholder="ivan@example.com" class="input-def body__20">
+                      <p class="question-form__label__text body__small">
+                        Используйте email для входа в аккаунт
+                      </p>
+                    </label>
+
+                    <label class="label-def label-passwrod">
+                      <p class="body__20 label-def__text">
+                        Пароль
+                        <span class="label-star body__small-02">*</span>
+                      </p>
+
+                      <input 
+                        type="text" 
+                        placeholder="Минимум 8 символов" 
+                        class="input-def input-password-custom body__20"
+                        autocomplete="new-password"
+                      >
+
+                      <span class="look__password">
+                        <img src="src/img/eye__open.svg" alt="">
+                      </span>
+                      <span class="not-visible__password">
+                        <img src="src/img/eye__close.svg" alt="">
+                      </span>
+
+                      <div class="lable-password__block">
+                        <p class="question-form__label__text body__small">
+                          Используйте буквы, цифры и символы для надёжности
+                        </p>
+                        <button class="body__small lable-password__block-btn" data-next-modal="passwordRecovery">
+                          Забыли пароль?
+                        </button>
+                      </div>
+                    </label>
+
+                    <button class="btn-primary__alt" data-next-modal="phoneСonfirmation">
+                      <p class="lable__20">
+                        Войти в личный кабинет
+                      </p>
+
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <p class="question-form__box body__16">
+                      На указанный email будет отправлено письмо 
+                      с подтверждением регистрации
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal__alt" id="passwordRecovery">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt passwordRecovery">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="RegByEmail">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="passwordRecovery__head">
+                    <p class="passwordRecovery__head-title title__26">
+                      Восстановление пароля
+                    </p>
+                    <p class="passwordRecovery__head-text body__16">
+                      Введите email, указанный при регистрации
+                    </p>
+                  </div>
+
+                  <form action="" class="passwordRecovery-form">
+                    <label class="label-def">
+                      <p class="body__20 label-def__text">
+                        Email
+                        <span class="label-star body__small-02">
+                          *
+                        </span>
+                      </p>
+                      <input type="email" placeholder="ivan@example.com" class="input-def body__20">
+                      <p class="question-form__label__text body__small">
+                        Мы отправим ссылку для восстановления пароля на этот email
+                      </p>
+                    </label>
+
+                    <button class="btn-primary__alt" data-next-modal="checkYourEmail">
+                      <p class="lable__20">
+                        Отправить ссылку
+                      </p>
+
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal__alt" id="checkYourEmail">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt checkYourEmail">
+                  <button class="RegistrationByPhone-btn-back" data-prev-modal="passwordRecovery">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.92893 12.0002H19.0711M4.92893 12.0002L11.2929 18.3642M4.92893 12.0002L11.2929 5.63626" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <p class="lable__20">
+                      Назад
+                    </p>
+                  </button>
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/mail__reg.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Проверьте почту
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Мы отправили письмо со ссылкой для восстановления пароля на
+                    </p>
+
+                    <span class="body__16 RegistrationByPhone-head__text-email">
+                      ivanov@mail.com
+                    </span>
+                  </div>
+
+                  <p class="RegistrationByPhone-form-text body__16">
+                    Если письма нет — проверьте папку «Спам».
+                  </p>
+
+                  <button class="btn-secondary">
+                    <p class="lable__20">
+                      Отправить ещё раз
+                    </p>
+
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal__alt" id="creatingNewPassword">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt creatingNewPassword">
+
+                  <div class="passwordRecovery__head">
+                    <p class="passwordRecovery__head-title title__26">
+                      Создание нового пароля
+                    </p>
+                    <p class="passwordRecovery__head-text body__16">
+                      Введите email, указанный при регистрации
+                    </p>
+                  </div>
+
+                  <form action="" class="creatingNewPassword-form">
+                    <label class="label-def label-passwrod">
+                      <p class="body__20 label-def__text">
+                        Новый пароль
+                        <span class="label-star body__small-02">*</span>
+                      </p>
+
+                      <input 
+                        type="text" 
+                        placeholder="Минимум 8 символов" 
+                        class="input-def input-password-custom body__20"
+                        autocomplete="new-password"
+                      >
+
+                      <span class="look__password">
+                        <img src="src/img/eye__open.svg" alt="">
+                      </span>
+                      <span class="not-visible__password">
+                        <img src="src/img/eye__close.svg" alt="">
+                      </span>
+
+                      <p class="question-form__label__text body__small">
+                        Используйте буквы, цифры и символы для надёжности       
+                      </p>
+                    </label>
+                    <label class="label-def label-passwrod">
+                      <p class="body__20 label-def__text">
+                        Повторить пароль
+                        <span class="label-star body__small-02">*</span>
+                      </p>
+
+                      <input 
+                        type="text" 
+                        placeholder="Минимум 8 символов" 
+                        class="input-def input-password-custom body__20"
+                        autocomplete="new-password"
+                      >
+
+                      <span class="look__password">
+                        <img src="src/img/eye__open.svg" alt="">
+                      </span>
+                      <span class="not-visible__password">
+                        <img src="src/img/eye__close.svg" alt="">
+                      </span>
+
+                      <p class="question-form__label__text body__small">
+                        Используйте буквы, цифры и символы для надёжности       
+                      </p>
+                    </label>
+
+                    <button class="btn-primary__alt" data-next-modal="passwordChangedSuccessfully">
+                      <p class="lable__20">
+                        Сохранить новый пароль
+                      </p>
+  
+                      <span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="modal__alt" id="passwordChangedSuccessfully">
+              <div class="modal-content__alt">
+                <div class="modal-content-style__alt passwordChangedSuccessfully">
+
+                  <div class="RegistrationByPhone-head">
+                    <span class="create-acc__btn-item__img ">
+                      <img src="src/img/zamok.svg" alt="">
+                    </span>
+
+                    <p class="title__26 RegistrationByPhone-head__title">
+                      Пароль успешно изменён
+                    </p>
+
+                    <p class="body__16 RegistrationByPhone-head__text">
+                      Теперь вы можете войти в личный кабинет с новым паролем
+                    </p>
+                  </div>
+
+                  <a class="btn-primary__alt">
+                    <p class="lable__20">
+                      Войти в кабинет
+                    </p>
+
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <div class="footer">
+        
+        <div class="footer-up">
+          <a class="logo-footer">
+            <img src="src/img/logo__footer.svg" alt="" class="logo-footer__img">
+          </a>
+          <div class="footer-up__container">
+
+            <div class="foo-up__one">
+              <div class="foo-up__one-box">
+                <p class="foo-up__one-box__text lable__18-m">
+                  БАД. Не является лекарственным средством
+                </p>
+                <p class="foo-up__one-box__info body__small-02">
+                  Общество с ограниченной ответственностью  «Омега-Си» <br>
+                  Юридический адрес: 685000, г. Магадан, ул.  Портовая, 1 <br>
+                  ИНН: 4900000508  КПП: 490001001  ОГРН: 1214900000150
+                </p>
+              </div>
+    
+              <div class="foo-up__connection">
+                <p class="foo-up__connection-text lable__18-m">
+                  Мы в соцсетях
+                </p>
+    
+                <div class="foo-up__social-icon">
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/tg.svg" alt="" class="social-icon__link-img">
+                  </a>
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/vk.svg" alt="" class="social-icon__link-img">
+                  </a>
+                  <a href="" class="solcial-icon__link">
+                    <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
+                  </a>
+                </div>
+              </div>
+            </div>
+  
+            <nav class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="catalog.html" class="footer-nav__list-item__link body__16-alt">
+                    Каталог
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="about.html" class="footer-nav__list-item__link body__16-alt">
+                    О компании
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="media.html" class="footer-nav__list-item__link body__16-alt">
+                    Мы в медиа
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Полезные материалы
+                  </a>
+                </li>
+              </ul>
+              
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="loyalty__program.html" class="footer-nav__list-item__link body__16-alt">
+                    Программа лояльности
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="reviews.html" class="footer-nav__list-item__link body__16-alt">
+                    Отзывы
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="faq.html" class="footer-nav__list-item__link body__16-alt">
+                    FAQ
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="contacts.html" class="footer-nav__list-item__link body__16-alt">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+  
+              <ul class="footer-nav__list">
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Купить на
+  
+                    <span class="footer-nav__list-item__link-img">
+                      <img src="src/img/ozon.svg" alt="">
+                    </span>
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="privacy__policy.html" class="footer-nav__list-item__link body__16-alt">
+                    Политика <br>
+                    конфиденциальности
+                  </a>
+                </li>
+                <li class="footer-nav__list-item">
+                  <a href="" class="footer-nav__list-item__link body__16-alt">
+                    Обработка <br>
+                    персональных данных
+                  </a>
+                </li>
+              </ul>
+            </nav>
+  
+            <div class="foo-up__two">
+              <p class="foo-up__two-text lable__18-m">
+                Связаться с нами
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                8(4132) 20-05-30 доб. 569
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                main@sea-wolf.ru
+              </p>
+  
+              <p class="foo-up__two-text body__16-alt">
+                685000, г. Магадан, ул.  Портовая, 1
+              </p>
+  
+              <a href="" class="foo-up__two-link">
+                <img src="src/img/tg.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="foo-up__one-box__mobile">
+          <p class="foo-up__one-box__text lable__18-m">
+            БАД. Не является лекарственным средством
+          </p>
+          <p class="foo-up__one-box__info body__small-02">
+            Общество с ограниченной ответственностью  «Омега-Си» <br>
+            Юридический адрес: 685000, г. Магадан, ул.  Портовая, 1 <br>
+            ИНН: 4900000508  КПП: 490001001  ОГРН: 1214900000150
+          </p>
+        </div>
+
+        <div class="footer-down">
+          <span class="footer-down__date body__16">
+            © 2025 NORD MILE
+          </span>
+
+          <div class="footer-down__card">
+            <span class="footer-down__card-img">
+              <img src="src/img/mir.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/viza.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/master.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/master__02.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/yandex__pay.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/yandex__split.svg" alt="">
+            </span>
+            <span class="footer-down__card-img">
+              <img src="src/img/spb.svg" alt="">
+            </span>
+          </div>
+
+          <span class="footer-down__company body__16">
+            Request Design
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- burger-menu -->
+  <div class="burger-menu">
+    <div class="burger-content">
+      
+      <div class="burger-up">
+        <div class="user-nav">
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img user-nav__link-img__item">
+              <img src="src/img/shop__bag.svg" alt="">
+
+              <span class="block-header__shop__counter">
+                123
+              </span>
+            </span>
+            Корзина
+          </a>
+          <a href="" class="user-nav__link lable__18">
+            <span class="user-nav__link-img">
+              <img src="src/img/personal__account.svg" alt="">
+            </span>
+            Личный кабинет
+          </a>
+        </div>
+        <span class="menu-close">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <nav class="nav-burger">
+        <a href="catalog.html" class="lable__18-m nav-burger__list-item__link">
+          Каталог
+        </a>
+  
+        <ul class="nav-burger__list">
+          <li class="nav-burger__list-item">
+            <a href="about.html" class="nav-burger__list-item__link lable__18">
+              О компании
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="media.html" class="nav-burger__list-item__link lable__18">
+              Медиа о нас
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="" class="nav-burger__list-item__link lable__18">
+              Полезные материалы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="loyalty__program.html" class="nav-burger__list-item__link lable__18">
+              Программа лояльности
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="reviews.html" class="nav-burger__list-item__link lable__18">
+              Отзывы
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="faq.html" class="nav-burger__list-item__link lable__18">
+              FAQ
+            </a>
+          </li>
+          <li class="nav-burger__list-item">
+            <a href="contacts.html" class="nav-burger__list-item__link lable__18">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="burger-menu__connection">
+        <p class="burger-menu__connection-text lable__18-m">
+          Мы в соцсетях
+        </p>
+  
+        <div class="burger-menu__social-icon">
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/tg.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/vk.svg" alt="" class="social-icon__link-img">
+          </a>
+          <a href="" class="burger-menu__solcial-icon__link">
+            <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/js/input__errors.js"></script>
+  <script src="src/js/password__reg.js"></script>
+  <script src="src/js/registration__pop-up.js"></script>
+  <script src="src/js/code__group.js"></script>
+    <script src="src/js/modal__all.js"></script>
+</body>
+</html>

@@ -137,6 +137,33 @@ openModal(modal) {
   modalManager.init();
   initBurgerMenu();
 
+  // Открытие модалки бонуса через 30 секунд
+  setTimeout(function() {
+    const bonusModal = document.getElementById('modalBonus');
+    if (bonusModal) {
+      modalManager.openModal(bonusModal);
+    }
+  }, 30000); // 30000 миллисекунд = 30 секунд
+
+
+  // ────────────────────────────────────────────────
+  // ЛОВЕЦ ЛИДОВ - открытие при попытке уйти с сайта
+  // ────────────────────────────────────────────────
+  let exitModalShown = sessionStorage.getItem('modalExit') === 'true';
+
+  document.addEventListener('mouseleave', function(e) {
+    // Проверяем, что курсор ушел за пределы страницы (вверх)
+    if (e.clientY <= 0 && !exitModalShown) {
+      exitModalShown = true;
+      sessionStorage.setItem('exitModalShown', 'true');
+      
+      const exitModal = document.getElementById('modalExit');
+      if (exitModal) {
+        modalManager.openModal(exitModal);
+      }
+    }
+  });
+
 });
 
 

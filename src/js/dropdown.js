@@ -171,3 +171,4 @@ document.querySelectorAll('.container-catalog__tabs-item').forEach(tab => {
 
 // По дефолту первый активен
 document.querySelector('.container-catalog__tabs-item').classList.add('active');
+

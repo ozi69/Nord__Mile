@@ -2,13 +2,6 @@ header {
   margin: 0 auto;
   position: relative;
 }
-.header-wrapper {
-  margin: 4rem 4rem 0;
-
-  @media (max-width: 767px) {
-    margin: unset;
-  }
-}
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,12 +44,16 @@ header {
   padding: 1.6rem 2.4rem;
   backdrop-filter: blur(2rem);
   border-radius: var(--unit-16);
+  width: 184rem;
+  margin: 4rem 0 0;
 
   position: unset;
 
   @media (max-width: 767px) {
     padding: 2rem 1.6rem;
     border-radius: unset;
+    margin: unset;
+    width: 100%;
 
     position: fixed;
   }
@@ -123,6 +120,24 @@ header {
   }
 }
 .block-header__shop {
+  position: relative;
+}
+.block-header__shop__counter {
+  font-size: 1rem;
+  padding: 0.2rem 0.3rem;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 4.8rem;
+  background-color: var(--red);
+  color: var(--beige);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1.2rem;
+  right: -0.4rem;
 }
 .block-header-item {
   width: 2.4rem;
