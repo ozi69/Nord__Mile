@@ -7,6 +7,13 @@
   height: 70rem;
 
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .card-stock__img {
+      scale: 1.2;
+    }
+  }
 
   @media (max-width: 767px) {
     padding: var(--unit-20) var(--unit-12);
@@ -37,6 +44,8 @@
 .card-stock__img {
   position: absolute;
   inset: 0;
+
+  transition: 0.4s ease;
 }
 .card-stock__content {
   display: flex;

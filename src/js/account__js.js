@@ -85,3 +85,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
 });
+
+
+document.querySelector('.account__personal-head-hgroup__btn').addEventListener('click', function () {
+  document.querySelectorAll('span.label-def-text.input-def').forEach(function (span) {
+    const input = document.createElement('input');
+    // Копируем классы
+    input.className = span.className;
+    // Берём текст как значение поля
+    input.value = span.textContent.trim();
+    span.parentNode.replaceChild(input, span);
+  });
+});
