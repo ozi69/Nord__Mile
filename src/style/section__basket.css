@@ -121,6 +121,18 @@
   border: 0.1rem solid var(--line);
   border-radius: 1.2rem;
 
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary);
+    cursor: pointer;
+    color: var(--white);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (max-width: 767px) {
     min-width: 2.4rem;
     height: 2.4rem;
@@ -163,6 +175,12 @@
 .card-product__delete {
   width: 3.2rem;
   height: 3.2rem;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @media (max-width: 767px) {
     width: 2.4rem;

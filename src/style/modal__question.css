@@ -1,6 +1,6 @@
 #modalQuestion {
   .modal__question {
-    width: 40rem;
+    width: 48rem;
 
     display: flex;
     flex-direction: column;

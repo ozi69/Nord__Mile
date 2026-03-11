@@ -40,6 +40,8 @@
   gap: var(--unit-40);
   border: 0.2rem solid transparent;
 
+  cursor: pointer;
+
   @media (max-width: 767px) {
     padding: var(--unit-8) var(--unit-16);
     gap: var(--unit-8);
@@ -105,9 +107,13 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  padding: var(--unit-20) var(--unit-32) var(--unit-20);
+
+  @media (max-width: 767px) {
+    padding: var(--unit-8) var(--unit-12);
+  }
 }
 .catalog-filter_list {
-  padding: var(--unit-20) var(--unit-32) var(--unit-20);
   border-radius: var(--unit-32);
   border: 0.1rem solid var(--line);
   transition: 0.3s ease;
@@ -116,7 +122,6 @@
 
   @media (max-width: 767px) {
     min-width: 21rem;
-    padding: var(--unit-8) var(--unit-12);
     border-radius: var(--unit-24);
   }
 }

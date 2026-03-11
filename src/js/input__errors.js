@@ -10,7 +10,9 @@ function initFormValidation() {
 
     // Определяем тип поля
     let type = null;
-    if (text.includes('имя') || text.includes('фио')) type = 'name';
+    if (text.includes('имя') || text.includes('фио') || text.includes('фамилия')) {
+    type = 'name';
+}
     if (text.includes('телефон'))                      type = 'phone';
     if (text.includes('email'))                        type = 'email';
 

@@ -105,6 +105,7 @@ header {
   gap: 2rem;
 }
 .nav-header__list-item {
+  color: var(--primary);
 }
 .nav-header__list-item__link {
 }

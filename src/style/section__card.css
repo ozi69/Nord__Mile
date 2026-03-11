@@ -452,7 +452,13 @@
     border-radius: unset;
   }
 }
+.card-date__section__alt {
+  max-width: 120rem;
 
+  @media (max-width: 767px) {
+    max-width: unset;
+  }
+}
 .card-date__tabs {
   display: flex;
   border-bottom: 0.1rem solid var(--line);
@@ -1054,7 +1060,7 @@
   }
 }
 .block-reviews__btn {
-  display: flex;
+  width: fit-content;
 }
 
 /*  */

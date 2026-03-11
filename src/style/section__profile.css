@@ -105,21 +105,21 @@
 
   .catalog-filter_list {
     border-radius: 2.4rem;
-    padding: 1.6rem 2.4rem;
+    border: 0.2rem solid var(--line);
+
+    .catalog-filter_list-head {
+      padding: 1.6rem 2.4rem !important;
+    }
 
     @media (max-width: 767px) {
-      padding: 1.4rem 2rem !important;
-      border: 0.2rem solid var(--line);
-      height: 5.5rem;
-
-      .catalog-filter_list-head {
-        margin-top: 0.5rem;
-      }
-
       .catalog-filter_list-hgroup__text {
         font-size: 1.6rem !important;
       }
     }
+  }
+
+  .catalog-filter_list.is-open {
+    border-radius: 2.4rem 2.4rem 0 0;
   }
 }
 

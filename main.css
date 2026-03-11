@@ -464,7 +464,7 @@
   background-color: var(--primary);
   border-radius: var(--unit-32);
   color: var(--beige);
-  border: 0.1rem solid var(--beige);
+  border: 0.2rem solid var(--primary);
   padding: var(--unit-10) var(--unit-24);
 
   display: flex;
@@ -594,7 +594,7 @@
   border-radius: var(--unit-32);
   color: var(--primary);
   padding: var(--unit-10) var(--unit-24);
-  border: 0.3rem solid var(--primary);
+  border: 0.2rem solid var(--primary);
 
   display: flex;
   align-items: center;
@@ -602,6 +602,9 @@
   gap: var(--unit-10);
 
   transition: 0.3s ease;
+
+  @media (max-width: 767px) {
+  }
 
   svg {
     width: var(--unit-24);

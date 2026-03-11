@@ -366,7 +366,7 @@
 
               <!-- TAB: ОПИСАНИЕ -->
               <div class="card-date__tab-content is-active" id="tab-description">
-                <div class="card-date__section">
+                <div class="card-date__section card-date__section__alt">
                   <div class="block-flex">
                     <div class="card-date__section-title lable__18-m">Описание продукта</div>
                     <p class=" body__16">Omega-3 1000 mg от Nord Mile — это высококачественный рыбий жир в форме реэтерифицированных триглицеридов (rTG), обеспечивающий максимальную биодоступность омега-3 жирных кислот EPA и DHA.</p>
@@ -527,7 +527,7 @@
                   </div>
 
                   <div class="block-flex__pin-alt">
-                    <div class="lable__18-m block-flex__pin-title">
+                    <div class="lable__18 block-flex__pin-title">
                       Хорошо сочетается:
                     </div>
 
@@ -1003,20 +1003,18 @@
                       </div>
                     </div>
                   </div>
+                  
+                  <button href="" class="block-reviews__btn btn-secondary">
+                    <p class="lable__20">
+                      Показать все отзывы
+                    </p>
 
-                  <div class="block-reviews__btn">
-                    <a href="" class="btn-secondary">
-                      <p class="lable__20">
-                        Показать все отзывы
-                      </p>
-
-                      <span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </button>
                 </div>
               </div>
 
@@ -1028,7 +1026,7 @@
                       Вопросы и ответы
                     </div>
 
-                    <a href="" class="btn-primary__alt">
+                    <button class="btn-primary__alt" data-modal-open="#modalQuestion">
                       <p class="lable__20">
                         Задать вопрос
                       </p>
@@ -1038,7 +1036,7 @@
                         <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                       </span>
-                    </a>
+                    </button>
                   </div>
 
                   <div class="container-qua">
@@ -1138,7 +1136,7 @@
                     </p>
 
                     <div class="block-qua__btn">
-                      <a href="" class="btn-primary__alt">
+                      <button class="btn-primary__alt" data-modal-open="#modalQuestion">
                         <p class="lable__20">
                           Задать вопрос
                         </p>
@@ -1148,7 +1146,7 @@
                           <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                         </span>
-                      </a>
+                      </button>
                       <a href="" class="btn-secondary">
                         <p class="lable__20">
                           Связаться с поддержкой
@@ -1904,6 +1902,93 @@
             <img src="src/img/dzen.svg" alt="" class="social-icon__link-img">
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modalQuestion -->
+  <div class="modal" id="modalQuestion">
+    <div class="modal-content">
+      <div class="modal__question modal-content-style">
+        <button class="close-modal" data-modal-close>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#28315C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="question-head">
+          <div class="question-head__img">
+            <img src="src/img/modal__01.svg" alt="">
+          </div>
+  
+          <span class="title__26 question-head__title">
+            Задать вопрос
+          </span>
+  
+          <p class="body__16 question-head__text">
+            Напишите нам, и мы поможем подобрать продукт 
+            и ответим на любые вопросы
+          </p>
+        </div>
+  
+        <form action="" class="question-form">
+          <label class="label-def">
+            <p class="body__20 label-def__text">
+              Имя
+            </p>
+            <input type="text" placeholder="Иван" class="input-def body__20">
+          </label>
+  
+          <p class="lable__20 question-form__text">
+            Введите номер телефона или email, по которому вы хотите, чтобы с Вами связались
+          </p>
+  
+          <label class="label-def">
+            <p class="body__20 label-def__text">
+              Email
+            </p>
+            <input type="text" placeholder="ivan@example.com" class="input-def body__20">
+            <p class="body__small question-form__label__text">
+              Адрес, по которому мы сможем с Вами связаться
+            </p>
+          </label>
+  
+          <label class="label-def">
+            <p class="body__20 label-def__text">
+              Телефон
+            </p>
+            <input type="text" placeholder="+7 (___) ___-__-__" class="input-def body__20">
+            <p class="body__small question-form__label__text">
+              Телефон, по которому мы сможем с Вами связаться
+            </p>
+          </label>
+  
+          <label class="label-def body__20 label-def__alt">
+            <p class="body__20 label-def__text">
+              Ваш вопрос
+            </p>
+            <textarea name="" id="" placeholder="Напишите здесь Ваш вопрос" class="textarea-def body__20"></textarea>
+          </label>    
+
+          <button class="btn-primary__alt">
+            <p class="lable__20">
+              Отправить
+            </p>
+    
+            <span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M17 7H8M17 7V16" stroke="#FFF7DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </form>
+  
+  
+        <p class="body__16 question-form__box">
+          После обработки заявки, мы свяжемся с Вами удобным для Вас способом
+        </p>
+
       </div>
     </div>
   </div>

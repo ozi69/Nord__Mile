@@ -845,7 +845,7 @@
 }
 .account__bonus-block {
   display: grid;
-  grid-template-columns: 97rem 1fr;
+  grid-template-columns: 90rem 1fr;
   gap: 2rem;
 
   background-color: var(--primary);
@@ -897,6 +897,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  justify-self: end;
 
   @media (max-width: 767px) {
     position: absolute;
