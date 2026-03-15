@@ -1,101 +1,150 @@
-document.addEventListener('DOMContentLoaded', function() {
-  
-  const video = document.querySelector('.container-video__item');
-  const playButton = document.querySelector('.container-video__play');
-  const playIcon = document.querySelector('.play-icon');
-  const pauseIcon = document.querySelector('.pause-icon');
-  const content = document.querySelector('.container-video__content');
-  
-  if (!video || !playButton || !playIcon || !pauseIcon || !content) return;
-  
-  // Функция для обновления UI
-  function updateUI() {
-    if (video.paused) {
-      // Видео на паузе
-      video.classList.remove('playing');
-      
-      // Убираем атрибут controls (скрываем стандартные контролы)
-      video.removeAttribute('controls');
-      
-      // Показываем play иконку
-      playIcon.style.display = 'block';
-      pauseIcon.style.display = 'none';
-      
-      // Показываем кастомную кнопку и текст
-      playButton.classList.add('show');
-      content.classList.remove('hide');
-    } else {
-      // Видео играет
-      video.classList.add('playing');
-      
-      // Добавляем атрибут controls (показываем стандартные контролы)
-      video.setAttribute('controls', 'controls');
-      
-      // Показываем pause иконку
-      playIcon.style.display = 'none';
-      pauseIcon.style.display = 'block';
-      
-      // Скрываем кастомную кнопку и текст
-      playButton.classList.remove('show');
-      content.classList.add('hide');
-    }
-  }
-  
-  // Функция для воспроизведения/паузы
-  function toggleVideo() {
-    if (video.paused) {
-      video.play().then(() => {
-        updateUI();
-      }).catch(error => {
-        console.log('Ошибка воспроизведения:', error);
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // ─── About-video (автовоспроизведение + мьют по скроллу + кнопка) ──────────
+    const aboutVideo      = document.querySelector('.container__about-video__item');
+    const aboutContainer  = document.querySelector('.container__about-video');
+    const aboutPlayButton = aboutContainer?.querySelector('.container-video__play');
+    const aboutPlayIcon   = aboutContainer?.querySelector('.play-icon');
+
+    if (aboutVideo) {
+      aboutVideo.muted = true;
+      aboutVideo.autoplay = true;
+      aboutVideo.playsInline = true;
+      aboutVideo.setAttribute('playsinline', '');
+      aboutVideo.setAttribute('webkit-playsinline', '');
+
+      let aboutUserUnmuted = false;
+
+      aboutVideo.addEventListener('volumechange', () => {
+        aboutUserUnmuted = !aboutVideo.muted;
       });
-    } else {
-      video.pause();
+
+      const aboutObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio >= 0.5) {
+              aboutVideo.play().catch(() => {});
+              if (!aboutUserUnmuted) aboutVideo.muted = false;
+            } else {
+              aboutVideo.pause();
+              if (!aboutUserUnmuted) aboutVideo.muted = true;
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      aboutObserver.observe(aboutVideo);
+
+      // Кнопка play для about-video
+      if (aboutPlayButton && aboutPlayIcon) {
+
+        function updateAboutUI() {
+          if (aboutVideo.paused) {
+            aboutVideo.classList.remove('playing');
+            aboutVideo.removeAttribute('controls');
+            aboutPlayIcon.style.display = 'block';
+            aboutPlayButton.classList.add('show');
+          } else {
+            aboutVideo.classList.add('playing');
+            aboutVideo.setAttribute('controls', 'controls');
+            aboutPlayIcon.style.display = 'none';
+            aboutPlayButton.classList.remove('show');
+          }
+        }
+
+        function toggleAboutVideo() {
+          if (aboutVideo.paused) {
+            aboutVideo.play().then(updateAboutUI).catch(() => {});
+          } else {
+            aboutVideo.pause();
+            updateAboutUI();
+          }
+        }
+
+        aboutVideo.addEventListener('click',      (e) => { e.stopPropagation(); toggleAboutVideo(); });
+        aboutPlayButton.addEventListener('click', (e) => { e.stopPropagation(); toggleAboutVideo(); });
+
+        aboutVideo.addEventListener('play',  updateAboutUI);
+        aboutVideo.addEventListener('pause', updateAboutUI);
+        aboutVideo.addEventListener('ended', updateAboutUI);
+
+        aboutVideo.addEventListener('mouseenter', () => { if (!aboutVideo.paused) aboutPlayButton.classList.add('show');    });
+        aboutVideo.addEventListener('mouseleave', () => { if (!aboutVideo.paused) aboutPlayButton.classList.remove('show'); });
+
+        updateAboutUI();
+      }
+    }
+
+    // ─── Container-video (кастомный плеер с контентом) ──────────────────────────
+    const video      = document.querySelector('.container-video__item');
+    const playButton = document.querySelector('.container-video__play');
+    const playIcon   = document.querySelector('.play-icon');
+    const content    = document.querySelector('.container-video__content');
+
+    if (video && playButton && playIcon && content) {
+
+      let videoUserUnmuted = false;
+
+      video.addEventListener('volumechange', () => {
+        videoUserUnmuted = !video.muted;
+      });
+
+      const videoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio >= 0.5) {
+              if (!videoUserUnmuted) video.muted = false;
+            } else {
+              if (!videoUserUnmuted) video.muted = true;
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      videoObserver.observe(video);
+
+function updateUI() {
+  if (video.paused) {
+    video.classList.remove('playing');
+    video.removeAttribute('controls');
+    playButton.classList.add('show');
+    playButton.classList.add('clickable');
+    content.classList.remove('hide');
+    playButton.style.zIndex = '30';
+  } else {
+    video.classList.add('playing');
+    video.setAttribute('controls', 'controls');
+    playButton.classList.remove('show');
+    playButton.classList.remove('clickable');
+    playButton.style.zIndex = '-1';
+    content.classList.add('hide');
+  }
+}
+
+      function toggleVideo() {
+        if (video.paused) {
+          video.play().then(updateUI).catch((error) => console.log('Ошибка:', error));
+        } else {
+          video.pause();
+          updateUI();
+        }
+      }
+
+      video.addEventListener('click',      (e) => { e.stopPropagation(); toggleVideo(); });
+      playButton.addEventListener('click', (e) => { e.stopPropagation(); toggleVideo(); });
+
+      video.addEventListener('play',  updateUI);
+      video.addEventListener('pause', updateUI);
+      video.addEventListener('ended', updateUI);
+
+      video.addEventListener('mouseenter', () => { if (!video.paused) playButton.classList.add('show');    });
+      video.addEventListener('mouseleave', () => { if (!video.paused) playButton.classList.remove('show'); });
+
       updateUI();
     }
-  }
-  
-  // Клик по видео
-  video.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleVideo();
+
   });
-  
-  // Клик по кастомной кнопке
-  playButton.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleVideo();
-  });
-  
-  // События видео
-  video.addEventListener('play', function() {
-    updateUI();
-  });
-  
-  video.addEventListener('pause', function() {
-    updateUI();
-  });
-  
-  video.addEventListener('ended', function() {
-    updateUI();
-  });
-  
-  // При наведении на видео когда оно играет
-  video.addEventListener('mouseenter', function() {
-    if (!video.paused) {
-      // Показываем кастомную кнопку с иконкой pause
-      playButton.classList.add('show');
-    }
-  });
-  
-  video.addEventListener('mouseleave', function() {
-    if (!video.paused) {
-      // Скрываем кастомную кнопку когда видео играет
-      playButton.classList.remove('show');
-    }
-  });
-  
-  // Инициализация
-  updateUI();
-  
-});
+})();

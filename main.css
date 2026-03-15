@@ -475,6 +475,7 @@
   transition: 0.3s ease;
 
   @media (max-width: 767px) {
+    border-width: 0.1rem;
   }
 
   svg {
@@ -604,6 +605,7 @@
   transition: 0.3s ease;
 
   @media (max-width: 767px) {
+    border-width: .1rem;
   }
 
   svg {

@@ -24,12 +24,15 @@
 }
 
 .container__about-video {
+  position: relative;
 }
 
 .container__about-video__item {
   border-radius: var(--unit-24);
   height: 58rem;
   object-fit: cover;
+
+  cursor: pointer;
 
   @media (max-width: 767px) {
     height: 26rem;

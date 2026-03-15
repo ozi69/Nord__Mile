@@ -16,7 +16,6 @@
   }
 }
 
-/* Кастомная кнопка */
 .container-video__play {
   position: absolute;
   top: 50%;
@@ -29,38 +28,29 @@
   border: none;
   background: transparent;
   cursor: pointer;
-
   z-index: 30;
 
-  transition:
-    opacity 0.3s ease,
-    transform 0.2s ease;
-
-  /* По умолчанию скрыта */
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .container-video__play.show {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: none; /* кнопка видна но мышь не перехватывает */
+}
+
+.container-video__play.clickable {
+  pointer-events: auto; /* включаем клики только на паузе */
 }
 
 .container-video__play:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.container-video__play svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-}
-
-/* Иконки внутри кнопки */
-.play-icon,
-.pause-icon {
+.play-icon {
   display: block;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 /* Контент (текст) */
