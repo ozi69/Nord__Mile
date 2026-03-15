@@ -1,14 +1,50 @@
 (function () {
 
-  // ─── Жёсткий сброс всех видео при любой загрузке страницы ───────────────────
-  // pageshow ловит: обычную загрузку, обновление (F5), восстановление из bfcache
+  // ─── Вспомогательная функция: запустить видео как только оно готово ──────────
+  function autoPlayWhenReady(v) {
+    v.muted       = true;
+    v.currentTime = 0;
+    v.removeAttribute('controls');
+
+    function tryPlay() {
+      v.play().catch(() => {});
+    }
+
+    if (v.readyState >= 3) {
+      // Видео уже достаточно загружено — играем сразу
+      tryPlay();
+    } else {
+      // Ждём достаточной буферизации
+      v.addEventListener('canplay', tryPlay, { once: true });
+    }
+  }
+
+  // ─── Запуск авто-воспроизведения при любой загрузке страницы ─────────────────
+  // pageshow ловит: первую загрузку, F5, Ctrl+Shift+R, bfcache-восстановление
   window.addEventListener('pageshow', function () {
-    document.querySelectorAll('video').forEach(function (v) {
-      v.pause();
-      v.muted = true;
-      v.currentTime = 0;
-      v.removeAttribute('controls');
-    });
+    // about-video — всегда автоплей
+    const aboutVideo = document.querySelector('.container__about-video__item');
+    if (aboutVideo) {
+      autoPlayWhenReady(aboutVideo);
+    }
+
+    // container-video — автоплей только если виден в viewport (>= 50%)
+    const video = document.querySelector('.container-video__item');
+    if (video) {
+      const rect          = video.getBoundingClientRect();
+      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      const visibleRatio  = rect.height > 0 ? visibleHeight / rect.height : 0;
+
+      if (visibleRatio >= 0.5) {
+        autoPlayWhenReady(video);
+      } else {
+        // Не в viewport — сбрасываем на начало и ждём скролла
+        video.pause();
+        video.muted       = true;
+        video.currentTime = 0;
+        video.removeAttribute('controls');
+      }
+    }
   });
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -20,7 +56,6 @@
     const aboutPlayIcon   = aboutContainer?.querySelector('.play-icon');
 
     if (aboutVideo) {
-      // muted обязательно до autoplay — иначе браузер заблокирует воспроизведение
       aboutVideo.muted       = true;
       aboutVideo.autoplay    = true;
       aboutVideo.playsInline = true;
@@ -50,7 +85,6 @@
 
       aboutObserver.observe(aboutVideo);
 
-      // Кнопка play для about-video
       if (aboutPlayButton && aboutPlayIcon) {
 
         function updateAboutUI() {
@@ -76,8 +110,8 @@
           }
         }
 
-        aboutVideo.addEventListener('click',       (e) => { e.stopPropagation(); toggleAboutVideo(); });
-        aboutPlayButton.addEventListener('click',  (e) => { e.stopPropagation(); toggleAboutVideo(); });
+        aboutVideo.addEventListener('click',      (e) => { e.stopPropagation(); toggleAboutVideo(); });
+        aboutPlayButton.addEventListener('click', (e) => { e.stopPropagation(); toggleAboutVideo(); });
 
         aboutVideo.addEventListener('play',  updateAboutUI);
         aboutVideo.addEventListener('pause', updateAboutUI);
@@ -86,7 +120,6 @@
         aboutVideo.addEventListener('mouseenter', () => { if (!aboutVideo.paused) aboutPlayButton.classList.add('show');    });
         aboutVideo.addEventListener('mouseleave', () => { if (!aboutVideo.paused) aboutPlayButton.classList.remove('show'); });
 
-        // Безопасная инициализация UI — ждём готовности видео
         if (aboutVideo.readyState >= 1) {
           updateAboutUI();
         } else {
@@ -103,7 +136,6 @@
 
     if (video && playButton && playIcon && content) {
 
-      // Гарантируем muted при старте — без этого autoplay может быть заблокирован
       video.muted = true;
 
       let videoUserUnmuted = false;
@@ -116,8 +148,10 @@
         (entries) => {
           entries.forEach((entry) => {
             if (entry.intersectionRatio >= 0.5) {
+              video.play().catch(() => {});
               if (!videoUserUnmuted) video.muted = false;
             } else {
+              video.pause();
               if (!videoUserUnmuted) video.muted = true;
             }
           });
@@ -164,7 +198,6 @@
       video.addEventListener('mouseenter', () => { if (!video.paused) playButton.classList.add('show');    });
       video.addEventListener('mouseleave', () => { if (!video.paused) playButton.classList.remove('show'); });
 
-      // Безопасная инициализация UI — ждём готовности видео
       if (video.readyState >= 1) {
         updateUI();
       } else {
