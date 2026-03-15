@@ -1,4 +1,16 @@
 (function () {
+
+  // ─── Жёсткий сброс всех видео при любой загрузке страницы ───────────────────
+  // pageshow ловит: обычную загрузку, обновление (F5), восстановление из bfcache
+  window.addEventListener('pageshow', function () {
+    document.querySelectorAll('video').forEach(function (v) {
+      v.pause();
+      v.muted = true;
+      v.currentTime = 0;
+      v.removeAttribute('controls');
+    });
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
 
     // ─── About-video (автовоспроизведение + мьют по скроллу + кнопка) ──────────
